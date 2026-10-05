@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="그로잉 닷이 모아 전하는 AI 공모전. 공모전 소식과 마감 일정, 주최 기관과 공식 공고를 확인하세요.">
+  <title>그로잉 닷 | AI 공모전 모아보기</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23075c47'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold' font-size='18'%3EAi%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <script>
+    // Preserve the repository subdirectory, query string and fragment on GitHub Pages.
+    if (location.protocol !== 'file:' && location.pathname.endsWith('/')) {
+      location.replace(new URL('index.html' + location.search + location.hash, location.href).href);
+    }
+  </script>
+  <script src="./config.js" defer></script>
+  <script src="./snapshot.js" defer></script>
+  <script src="./poster-map.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contests">공모전 목록 바로가기</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="./index.html" aria-label="그로잉 닷 AI 공모전 홈"><span class="logo-crop"><img src="./growing-dot-brand.png" alt="GROWING DOT · 그로잉 닷"></span></a><span class="header-note">그로잉 닷이 모아 전하는 AI 공모전</span></div></header>
+  <main>
+    <section class="heading" aria-labelledby="page-title">
+      <div><p class="eyebrow">CURATED BY GROWING DOT</p><h1 id="page-title">AI로 펼치는 가능성,<br>그로잉 닷에서 발견하세요.</h1><p class="intro">흩어진 AI 공모전 소식을 한곳에 모았습니다.<br class="mobile-break"> 마음에 드는 기회를 찾고, 공식 공고에서 자세히 확인하세요.</p></div>
+      <div class="summary"><span id="count">—</span><span>개의 공모전</span></div>
+    </section>
+    <div class="list-bar"><h2>모아온 AI 공모전</h2><div class="sync"><span id="sync-label" role="status" aria-live="polite">목록을 불러오는 중</span><button type="button" id="refresh">새로고침</button></div></div>
+    <p class="notice" id="notice" role="status" hidden></p>
+    <section class="grid" id="contests" aria-label="공모전 목록" aria-busy="true"></section>
+    <p class="empty" id="empty" hidden>등록된 공모전이 없습니다.</p>
+    <noscript><p class="notice">공모전 목록을 보려면 브라우저의 JavaScript를 켜주세요.</p></noscript>
+  </main>
+  <footer><strong>GROWING DOT · 그로잉 닷</strong><span>그로잉 닷은 공모전 정보를 모아 소개하며, 각 공모전의 주최 기관이 아닙니다.<br>D-day는 한국 시간 기준입니다. 정확한 접수 시간과 참가 조건은 공식 공고를 확인하세요.</span></footer>
+</body>
+</html>

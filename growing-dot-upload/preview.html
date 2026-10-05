@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>PC · 모바일 미리보기 | 그로잉 닷</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23075c47'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-family='Arial' font-size='18'%3EAi%3C/text%3E%3C/svg%3E">
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#edf2ef;color:#182239;font-family:"Noto Sans KR","Malgun Gothic",sans-serif}header{background:#fff;border-bottom:1px solid #dfe4ed;padding:24px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px}h1{font-size:1.3rem;letter-spacing:-.04em;margin:0 0 8px}p{font-size:.875rem;line-height:1.7;color:#5c687e;margin:0}nav{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}button,.open{font:inherit;font-size:.875rem;padding:11px 15px;border:1px solid #d1d8e5;border-radius:8px;background:white;color:#26354f;text-decoration:none;cursor:pointer}.open{background:#087251;border-color:#087251;color:white}button:hover{background:#f3f5fa}:focus-visible{outline:3px solid #5877ed;outline-offset:4px}main{max-width:1900px;margin:auto;padding:28px 30px 36px;display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:26px;align-items:start}.panel{min-width:0}.label{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}h2{font-size:1rem;margin:0}.size{font-size:.8125rem;color:#67758c;font-variant-numeric:tabular-nums}.browser{border:1px solid #d5dbe5;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 12px 32px #1f35530b}.chrome{padding:12px 16px;border-bottom:1px solid #e4e8ef;background:#fafbfc;display:flex;align-items:center;gap:6px}.dot{width:8px;height:8px;border-radius:50%;background:#d4dae5}.address{margin:auto;color:#718099;font-size:.75rem}.viewport{position:relative;overflow:hidden;width:100%;background:white;height:600px}iframe{display:block;border:0;transform-origin:top left;background:white}.phone{border:7px solid #263045;border-radius:28px;overflow:hidden;background:white;box-shadow:0 12px 32px #1f355319}.phone-top{height:25px;display:flex;justify-content:center;align-items:center;background:white}.speaker{width:54px;height:5px;border-radius:5px;background:#263045}.phone-bottom{height:22px;background:white;display:grid;place-items:center}.phone-bottom:after{content:"";width:90px;height:4px;border-radius:4px;background:#263045}.hint{margin-top:12px;font-size:.8125rem}footer{padding:0 30px 26px;text-align:center;color:#68758b;font-size:.8125rem;line-height:1.7}@media(max-width:1050px){main{grid-template-columns:minmax(0,1fr);gap:32px}.mobile-panel{width:min(100%,390px);justify-self:center}header{align-items:flex-start;flex-direction:column}}@media(max-width:500px){header{padding:22px 18px}main{padding:24px 16px}h1{font-size:1.2rem}footer{padding:0 18px 24px}.size{font-size:.75rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <div><h1>그로잉 닷 · PC와 모바일 미리보기</h1><p>같은 홈페이지를 두 화면 크기로 보여줍니다. 각 화면 안에서 따로 스크롤할 수 있어요.</p></div>
+    <nav aria-label="미리보기 도구"><button id="reload" type="button">두 화면 새로고침</button><a class="open" href="./index.html" target="_blank" rel="noopener">홈페이지 크게 보기</a></nav>
+  </header>
+  <main>
+    <section class="panel" aria-labelledby="desktop-title">
+      <div class="label"><h2 id="desktop-title">PC 홈페이지</h2><span class="size">1280 × 900</span></div>
+      <div class="browser"><div class="chrome" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="address">index.html</span></div><div class="viewport" data-width="1280" data-height="900"><iframe src="./index.html" title="PC 홈페이지 미리보기, 너비 1280픽셀" width="1280" height="900"></iframe></div></div>
+      <p class="hint">PC 배치를 유지한 채 공간에 맞춰 축소했습니다. 원래 크기는 ‘홈페이지 크게 보기’에서 확인하세요.</p>
+    </section>
+    <section class="panel mobile-panel" aria-labelledby="mobile-title">
+      <div class="label"><h2 id="mobile-title">모바일</h2><span class="size">390 × 844</span></div>
+      <div class="phone"><div class="phone-top" aria-hidden="true"><span class="speaker"></span></div><div class="viewport" data-width="390" data-height="844"><iframe src="./index.html" title="모바일 홈페이지 미리보기, 너비 390픽셀" width="390" height="844"></iframe></div><div class="phone-bottom" aria-hidden="true"></div></div>
+      <p class="hint">모바일 너비에 맞춘 1열 공모전 목록입니다.</p>
+    </section>
+  </main>
+  <footer>두 화면 모두 실제 index.html을 표시합니다. 포스터와 실시간 데이터 연결 상태도 홈페이지와 같습니다.</footer>
+  <script>
+    const viewports = document.querySelectorAll('.viewport');
+    function resize() {
+      viewports.forEach(box => {
+        const scale = Math.min(1, box.clientWidth / Number(box.dataset.width));
+        const frame = box.querySelector('iframe');
+        frame.style.transform = `scale(${scale})`;
+        box.style.height = `${Number(box.dataset.height) * scale}px`;
+      });
+    }
+    const observer = new ResizeObserver(resize);
+    viewports.forEach(box => observer.observe(box));
+    resize();
+    document.querySelector('#reload').addEventListener('click', () => {
+      document.querySelectorAll('iframe').forEach(frame => { frame.src = new URL('./index.html', location.href).href; });
+    });
+  </script>
+</body>
+</html>
