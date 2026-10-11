@@ -1,0 +1,71 @@
+name: Daily sheet to website
+on:
+  # Candidate daily time: 10:17 KST, after the 09:00 collection start.
+  # Enable ONLY after credentials and the collection completion policy are verified.
+  schedule:
+    - cron: '17 1 * * *'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [contest-sheet-updated]
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  sync:
+    if: vars.DAILY_SHEET_SYNC_ENABLED == 'true' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.sync.outputs.changed }}
+      revision: ${{ steps.revision.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Read public columns and validate
+        id: sync
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: node scripts/sync-sheet.mjs
+      - name: Save only validated public files
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- growing-dot-upload/snapshot.js growing-dot-upload/index.html
+          git commit -m 'Update public contest snapshot from source sheet'
+          git push origin HEAD:main
+      - name: Record publication revision
+        id: revision
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+  deploy:
+    needs: sync
+    if: needs.sync.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.sync.outputs.revision }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: growing-dot-upload
+      # GITHUB_TOKEN pushes don't trigger the other push workflow, so deploy here.
+      - name: Deploy updated website
+        id: deployment
+        uses: actions/deploy-pages@v4
