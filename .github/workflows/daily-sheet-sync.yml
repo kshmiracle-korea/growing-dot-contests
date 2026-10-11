@@ -1,12 +1,10 @@
 name: Daily sheet to website
 on:
-  # Candidate daily time: 10:17 KST, after the 09:00 collection start.
-  # Enable ONLY after credentials and the collection completion policy are verified.
+  # Once daily at 12:17 KST, allowing time for morning collection.
+  # This is a daily snapshot, not a collector-completion event.
   schedule:
-    - cron: '17 1 * * *'
+    - cron: '17 3 * * *'
   workflow_dispatch:
-  repository_dispatch:
-    types: [contest-sheet-updated]
 permissions:
   contents: read
 concurrency:
@@ -14,7 +12,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   sync:
-    if: vars.DAILY_SHEET_SYNC_ENABLED == 'true' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'workflow_dispatch' || vars.DAILY_SHEET_SYNC_ENABLED == 'true') && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
