@@ -2,6 +2,10 @@
   'use strict';
   const config = window.CONTEST_CONFIG || {};
   const grid = document.querySelector('#contests');
+  const archiveGrid = document.querySelector('#closed-contests');
+  const archivePanel = document.querySelector('#archive-panel');
+  const archiveButton = document.querySelector('#archive-toggle');
+  let closedCount = 0;
   const notice = document.querySelector('#notice');
   const label = document.querySelector('#sync-label');
   const refreshButton = document.querySelector('#refresh');
@@ -55,24 +59,37 @@
     el.append(img);
     return el;
   }
+  function contestState(item, now) {
+    const day = dateNumber(item.deadline), start = dateNumber(item.startDate);
+    const left = day === null ? null : Math.round((day - now) / DAY);
+    // Calendar dates in Korea take precedence over stale status/D-day cells.
+    const closed = day !== null ? day < now : /마감|종료/.test(item.status);
+    const upcoming = !closed && (start !== null ? start > now : /예정/.test(item.status));
+    const status = closed ? '마감' : upcoming ? '접수 예정' : day !== null || /접수\s*중/.test(item.status) ? '접수 중' : '일정 확인';
+    return {day, left, closed, status, rank: closed ? 3 : upcoming ? 1 : status === '접수 중' ? 0 : 2};
+  }
+  function updateArchiveButton() {
+    archiveButton.textContent = `마감 공모전 ${archivePanel.hidden ? '보기' : '숨기기'} (${closedCount})`;
+    archiveButton.setAttribute('aria-expanded', String(!archivePanel.hidden));
+  }
   function render() {
     const now = dateNumber(today());
-    const ordered = items.map((item, index) => ({item, index, day:dateNumber(item.deadline)})).sort((a,b) => {
-      const rank = x => x.day === null ? 1 : x.day < now ? 2 : 0;
-      return rank(a)-rank(b) || (a.day ?? Infinity)-(b.day ?? Infinity) || a.index-b.index;
-    });
+    const ordered = items.map((item, index) => ({item, index, ...contestState(item, now)})).sort((a,b) =>
+      a.rank - b.rank || (a.closed ? (b.day ?? -Infinity) - (a.day ?? -Infinity) : (a.day ?? Infinity) - (b.day ?? Infinity)) || a.index - b.index
+    );
     const fragment = document.createDocumentFragment();
-    for (const [coverIndex, {item, day}] of ordered.entries()) {
-      const url = safeUrl(item.url), image = safeUrl(item.image || (window.CONTEST_POSTERS || {})[item.url], true);
-      const left = day === null ? null : Math.round((day-now)/DAY);
-      const badge = left === null ? '일정 확인' : left < 0 ? '마감' : left === 0 ? 'D-DAY' : `D-${left}`;
-      const badgeClass = left === null ? 'unknown' : left < 0 ? 'closed' : left <= 7 ? 'urgent' : '';
+    const closedFragment = document.createDocumentFragment();
+    closedCount = 0;
+    for (const {item, index, day, left, closed, status} of ordered) {
+      const url = safeUrl(item.url), image = safeUrl(item.image, true) || safeUrl((window.CONTEST_POSTERS || {})[item.url], true);
+      const badge = closed ? '마감' : left === null ? '일정 확인' : left === 0 ? 'D-DAY' : `D-${left}`;
+      const badgeClass = closed ? 'closed' : left === null ? 'unknown' : left <= 7 ? 'urgent' : '';
       const card = make('article','card');
       const poster = make('div','poster');
-      const placeholder = fallback(item, coverIndex);
+      const placeholder = fallback(item, index);
       poster.append(placeholder);
       if (image) {
-        const img = make('img', 'official-poster'); img.alt = `${item.title} 공고 이미지`; img.loading = coverIndex < 4 ? 'eager' : 'lazy'; img.decoding = 'async'; img.referrerPolicy = 'no-referrer';
+        const img = make('img', 'official-poster'); img.alt = `${item.title} 공고 이미지`; img.loading = !closed && fragment.childNodes.length < 4 ? 'eager' : 'lazy'; img.decoding = 'async'; img.referrerPolicy = 'no-referrer';
         img.style.opacity = '0';
         img.onload = () => { placeholder.hidden = true; img.style.opacity = '1'; };
         img.onerror = () => { img.remove(); placeholder.hidden = false; };
@@ -85,15 +102,29 @@
       const heading = make('h3');
       heading.append(url ? link(url,'title-link', item.title) : document.createTextNode(item.title)); card.append(heading);
       const meta = make('div','card-meta');
-      const organizer = make('dl','organizer'); organizer.append(make('dt','','주최'),make('dd','',item.organizer || '공고에서 확인'));
-      meta.append(organizer, make('p','deadline',day === null ? '마감일은 공식 공고에서 확인하세요.' : `마감 ${new Date(day).toISOString().slice(0,10).replaceAll('-','. ')}`));
-      const official = url ? link(url,'official','공식 공고 보기') : make('span','unavailable','링크 준비 중');
-      if (url) official.setAttribute('aria-label',`${item.title} 공식 공고 보기 (새 탭)`);
-      meta.append(official); card.append(meta); fragment.append(card);
+      const details = make('dl', 'contest-details');
+      const fields = [
+        ['상태', status], ['마감일', item.deadline || '공고에서 확인'],
+        ['분야/주제', item.topic || '공고에서 확인'], ['참가 대상', item.eligibility || '공고에서 확인'],
+        ['주최/주관', item.organizer || '공고에서 확인'], ['접수 시작일', item.startDate || '공고에서 확인']
+      ];
+      for (const [name, value] of fields) {
+        const row = make('div', 'detail-row');
+        row.append(make('dt', '', name), make('dd', name === '상태' ? 'contest-status' : '', value));
+        details.append(row);
+      }
+      const official = url ? link(url,'official','상세보기 ↗') : make('span','unavailable','링크 준비 중');
+      if (url) official.setAttribute('aria-label',`${item.title} 상세보기 · 공식 공고 (새 탭)`);
+      meta.append(details, official); card.append(meta);
+      if (closed) { closedFragment.append(card); closedCount++; }
+      else fragment.append(card);
     }
     grid.replaceChildren(fragment);
-    document.querySelector('#count').textContent = String(items.length);
-    document.querySelector('#empty').hidden = items.length !== 0;
+    archiveGrid.replaceChildren(closedFragment);
+    document.querySelector('#count').textContent = String(items.length - closedCount);
+    document.querySelector('#empty').hidden = items.length !== closedCount;
+    document.querySelector('#archive-empty').hidden = closedCount !== 0;
+    updateArchiveButton();
     grid.setAttribute('aria-busy','false');
   }
   function showNotice(message, error = false) {
@@ -102,7 +133,7 @@
   function accept(data) {
     if (!data || data.ok !== true || !Array.isArray(data.items)) throw new Error('Invalid feed');
     items = data.items.filter(x => x && typeof x.title === 'string' && x.title.trim()).map(x => ({
-      title:x.title.trim(), deadline:String(x.deadline || ''), organizer:String(x.organizer || ''), image:String(x.image || ''), url:String(x.url || '')
+      title:x.title.trim(), deadline:String(x.deadline || ''), organizer:String(x.organizer || ''), topic:String(x.topic || ''), eligibility:String(x.eligibility || ''), status:String(x.status || ''), startDate:String(x.startDate || ''), image:String(x.image || ''), url:String(x.url || '')
     }));
     hasData = true; render();
   }
@@ -122,13 +153,17 @@
       script.src = u.href; document.head.append(script);
     });
   }
+  function snapshotDate() {
+    const day = dateNumber(window.CONTEST_SNAPSHOT?.updatedAt);
+    return day === null ? '확인일 미상' : new Date(day).toISOString().slice(0,10).replaceAll('-', '. ');
+  }
   async function refresh() {
     if (busy) return;
     if (!config.apiUrl) {
       if (window.CONTEST_SNAPSHOT) accept(window.CONTEST_SNAPSHOT);
       else { items = []; render(); }
-      label.textContent = '저장된 목록 · 2026. 10. 06.';
-      showNotice('미리보기입니다. 2026년 10월 6일에 확인한 목록이며, 자동 업데이트 연결 전입니다.');
+      label.textContent = `최신 스냅샷 · ${snapshotDate()}`;
+      showNotice(`${snapshotDate()}에 원본 시트에서 확인한 목록입니다. 마감 상태와 D-day는 한국 시간 기준으로 자동 갱신됩니다. 새 공모전과 내용 변경은 다음 데이터 갱신 때 반영됩니다.`);
       return;
     }
     busy = true; refreshButton.disabled = true; label.textContent = '업데이트 확인 중…';
@@ -139,10 +174,14 @@
     } catch {
       if (!hasData && window.CONTEST_SNAPSHOT) accept(window.CONTEST_SNAPSHOT);
       if (!hasData) render();
-      label.textContent = live ? '업데이트 지연 · 이전 목록 표시' : '실시간 연결 안 됨';
-      showNotice(live ? '최신 목록을 불러오지 못했습니다. 마지막으로 확인한 목록을 표시합니다. 잠시 후 다시 시도해 주세요.' : '실시간 목록을 불러오지 못했습니다. 저장된 미리보기 목록이 있으면 대신 표시합니다. 연결 주소와 웹 앱 공개 설정을 확인해 주세요.',true);
+      label.textContent = live ? '업데이트 지연 · 이전 목록 표시' : `저장된 스냅샷 · ${snapshotDate()}`;
+      showNotice(live ? '최신 목록을 불러오지 못했습니다. 마지막으로 확인한 목록을 표시합니다. 잠시 후 다시 시도해 주세요.' : '실시간 목록을 불러오지 못했습니다. 저장된 스냅샷 목록이 있으면 대신 표시합니다. 연결 주소와 웹 앱 공개 설정을 확인해 주세요.',true);
     } finally { busy = false; refreshButton.disabled = false; grid.setAttribute('aria-busy','false'); }
   }
+  archiveButton.addEventListener('click', () => {
+    archivePanel.hidden = !archivePanel.hidden;
+    updateArchiveButton();
+  });
   refreshButton.addEventListener('click',refresh);
   refresh();
   setInterval(() => { if (!document.hidden) refresh(); }, Math.max(60000, Number(config.refreshMs) || 300000));
