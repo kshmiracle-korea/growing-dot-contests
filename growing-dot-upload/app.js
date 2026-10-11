@@ -11,6 +11,15 @@
   const refreshButton = document.querySelector('#refresh');
   let items = [], hasData = false, busy = false, sequence = 0, live = false;
   const DAY = 86400000;
+  // These official DAKER hero images contain only a background. Their official
+  // title and subtitle are separate DOM text and must accompany the thumbnail.
+  // Match the verified background as well as the contest, so a new full poster
+  // supplied in the sheet will not receive duplicate text.
+  const bannerCopy = {
+    'https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims': ['cf0d3304597317f423a6ea99', '여러분만의 AI 기반 서비스 ·플랫폼 구현에 도전해 보세요 !'],
+    'https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai': ['b35bfff33ac276c2819815af', '2D 합성 미세구조 이미지로부터 재료 경도(대용값)를 예측하는 AI 모델 개발'],
+    'https://daker.ai/public/hackathons/kic-ai-agent-competition': ['5adec4b128ed5defd59c4a07', '투자 및 금융 업무의 혁신을 이끌 AI Agent를 기획하고, 실제 작동하는 MVP로 구현해보세요.']
+  };
   const today = () => new Intl.DateTimeFormat('en-CA', {timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   function dateNumber(value) {
     const m = String(value || '').trim().match(/^(\d{4})[-./]\s*(\d{1,2})[-./]\s*(\d{1,2})\.?$/);
@@ -89,10 +98,20 @@
       const placeholder = fallback(item, index);
       poster.append(placeholder);
       if (image) {
+        const banner = bannerCopy[item.url];
+        const knownBackground = banner && (new URL(image).pathname.endsWith(`/posters/${banner[0]}.jpg`) || image === safeUrl((window.CONTEST_POSTERS || {})[item.url], true));
+        let copy;
+        if (knownBackground) {
+          poster.className += ' poster-banner';
+          copy = make('div', 'banner-copy');
+          copy.append(make('strong', 'banner-title', item.title), make('span', 'banner-subtitle', banner[1]));
+          copy.hidden = true;
+          poster.append(copy);
+        }
         const img = make('img', 'official-poster'); img.alt = `${item.title} 공고 이미지`; img.loading = !closed && fragment.childNodes.length < 4 ? 'eager' : 'lazy'; img.decoding = 'async'; img.referrerPolicy = 'no-referrer';
         img.style.opacity = '0';
-        img.onload = () => { placeholder.hidden = true; img.style.opacity = '1'; };
-        img.onerror = () => { img.remove(); placeholder.hidden = false; };
+        img.onload = () => { placeholder.hidden = true; img.style.opacity = '1'; if (copy) copy.hidden = false; };
+        img.onerror = () => { img.remove(); placeholder.hidden = false; if (copy) copy.hidden = true; };
         img.src = image; poster.append(img);
       }
       poster.append(make('span',`badge ${badgeClass}`,badge));
