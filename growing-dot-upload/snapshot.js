@@ -180,7 +180,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "마감",
       "organizer": "4·16재단 / 4.16생명안전비엔날레",
       "startDate": "2026-09-29",
-      "image": ""
+      "image": "./posters/0c68047d8fcd9f42c2e3232a.jpg"
     },
     {
       "title": "2026년 인공지능(AI) 활용 청소년활동 안전공모전",
@@ -191,7 +191,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "한국청소년활동진흥원",
       "startDate": "2026-09-11",
-      "image": ""
+      "image": "./posters/f1255dfce4bdb03d53006288.jpg"
     },
     {
       "title": "AI(爱)로 여는 미래·중한 청년 AI 숏폼 영상 공모전",
@@ -202,7 +202,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "주한중국대사관·아주뉴스코퍼레이션 / 아주일보",
       "startDate": "2026-08-26",
-      "image": ""
+      "image": "./posters/378c5c7dce32913e98f5c5ff.jpg"
     },
     {
       "title": "고양새일 × 딜라이브 W-ink 영화제 AI 숏폼 공모전",
@@ -213,7 +213,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "고양여성인력개발센터·고양여성새로일하기센터 / 딜라이브",
       "startDate": "2026-09-16",
-      "image": ""
+      "image": "./posters/3db3265f61c291ff82694766.jpg"
     },
     {
       "title": "2026년 울산광역시 U잼 영상 공모전 (AI영상 부문)",
@@ -224,7 +224,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "울산광역시",
       "startDate": "2026-10-01",
-      "image": ""
+      "image": "./posters/695f0c9af73651693d243ead.jpg"
     },
     {
       "title": "2026년도 제44회 AI 교통안전 홍보작품 공모전",
@@ -235,7 +235,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "한국도로교통공단",
       "startDate": "2026-08-28",
-      "image": ""
+      "image": "./posters/51744d44d09942b3f3f5d29c.jpg"
     },
     {
       "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
@@ -246,7 +246,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "데이콘(DACON)",
       "startDate": "2026-09-29",
-      "image": ""
+      "image": "./posters/b35bfff33ac276c2819815af.jpg"
     },
     {
       "title": "2026 고성 해양심층수 AI브랜드 영상 공모전",
@@ -257,7 +257,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "(재)해양심층수산업고성진흥원",
       "startDate": "2026-09-17",
-      "image": ""
+      "image": "./posters/8e68ee0074385461d6919510.jpg"
     },
     {
       "title": "한강버스 운항 1주년 AI 영상 & 사진 공모전",
@@ -268,7 +268,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "㈜한강버스",
       "startDate": "2026-09-18",
-      "image": ""
+      "image": "./posters/52cec1b5d43238b407d5fd2e.jpg"
     },
     {
       "title": "2026년 해양안전 콘텐츠 공모전 (AI 디자인물·AI 숏폼영상)",
@@ -279,7 +279,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "해양수산부·해양경찰청·해양안전실천본부 / 한국해양교통안전공단",
       "startDate": "2026-08-24",
-      "image": ""
+      "image": "./posters/6d787a32d5f3f035ea59db8a.jpg"
     },
     {
       "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
@@ -290,7 +290,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "서울특별시·관악구·금천청년꿈터·서울대학교 앵커사업단 / 데이콘",
       "startDate": "2026-10-06",
-      "image": ""
+      "image": "./posters/cf0d3304597317f423a6ea99.jpg"
     },
     {
       "title": "2026 해운·항만·물류 AX 혁신 아이디어 공모전",
@@ -301,7 +301,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "한국해양진흥공사",
       "startDate": "2026-09-07",
-      "image": ""
+      "image": "./posters/59342bf06f62f762efe2fbcb.jpg"
     },
     {
       "title": "[BytePlus × AI-Kive] Seedance 2.5 AI 시리즈 제작지원 공모전",
@@ -312,7 +312,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "BytePlus / ㈜스튜디오프리윌루전·AI-Kive",
       "startDate": "2026-10-01",
-      "image": ""
+      "image": "./posters/1031ea4cd620eee749d63f7c.jpg"
     },
     {
       "title": "2026 자선냄비 나눔 AI 영상공모전",
@@ -323,7 +323,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "구세군자선냄비본부",
       "startDate": "2026-10-01",
-      "image": ""
+      "image": "./posters/8cbc671f8f8f82e624cdbb6c.jpg"
     },
     {
       "title": "2026 AI 활용 사례 공모전 시즌3",
@@ -334,7 +334,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "과학기술정보통신부 / 한국과학창의재단·정보통신산업진흥원 등",
       "startDate": "2026-09-01",
-      "image": ""
+      "image": "./posters/dde7419ee458b8d4733e4bcc.jpg"
     },
     {
       "title": "제28회 말 사진·AI 이미지 공모전 「찰나의 말, 영원한 이야기」",
@@ -345,7 +345,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "한국마사회",
       "startDate": "2026-10-01",
-      "image": ""
+      "image": "./posters/578a031b6a2bd09ec0caf97c.jpg"
     },
     {
       "title": "2026년 AI 라이프 솔루션 챌린지",
@@ -356,7 +356,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "산업통상부 / 한국산업기술기획평가원(KEIT)",
       "startDate": "2026-09-30",
-      "image": ""
+      "image": "./posters/87b7f92b6a97fb5a2c8fefe5.jpg"
     },
     {
       "title": "2026년 제천시 AI 활용 데이터 분석 아이디어 공모전",
@@ -367,7 +367,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "충청북도 제천시",
       "startDate": "2026-09-28",
-      "image": ""
+      "image": "./posters/c2f400e78b88a5c4da86519d.jpg"
     },
     {
       "title": "국부펀드 KIC, AI 에이전트 공모전",
@@ -378,7 +378,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "한국투자공사(KIC) / 데이콘(DAKER)",
       "startDate": "2026-10-01",
-      "image": ""
+      "image": "./posters/5adec4b128ed5defd59c4a07.jpg"
     },
     {
       "title": "AI 활용 옥외광고 간판 디자인 공모전",
@@ -389,7 +389,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "한국지방재정공제회 한국옥외광고센터",
       "startDate": "2026-09-14",
-      "image": ""
+      "image": "./posters/10ee7edf5194994e866d76c5.jpg"
     },
     {
       "title": "5극3특 성장엔진 미래지도 AI 영상 공모전",
@@ -400,7 +400,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "산업통상부 / 한국산업기술진흥원(KIAT)",
       "startDate": "2026-10-06",
-      "image": ""
+      "image": "./posters/3c1122b36ff8b8aafe53f097.jpg"
     },
     {
       "title": "2026 AI 캐릭터창작공모전",
@@ -411,7 +411,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "(사)캐릭터디자이너협회",
       "startDate": "2026-08-18",
-      "image": ""
+      "image": "./posters/9d8ddd171948ce3dc9a76787.jpg"
     }
   ]
 };
