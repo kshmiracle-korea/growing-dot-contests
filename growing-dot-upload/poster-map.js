@@ -30,5 +30,9 @@ window.CONTEST_POSTERS = {
   // 2026 AI 활용 사례 공모전 시즌3 — 공식 공고에서 2026-10-11 확인
   "https://aichallenge4all.or.kr/competitions/case-contest": "https://aichallenge4all.or.kr/_next/image?url=https%3A%2F%2Ffile.aichallenge4all.or.kr%2Fcompetitions%2Fcase-contest-banner-1774005340181.png&w=1920&q=90",
   // 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge — 공식 공고에서 2026-10-11 확인
-  "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims": "https://daker.ai/public/hackathon-banners/8108bf7f-e8fa-4bee-856e-9b8ee017b852/71ea9c9d-0393-48bf-b825-c4085983bb67.png"
+  "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims": "https://daker.ai/public/hackathon-banners/8108bf7f-e8fa-4bee-856e-9b8ee017b852/71ea9c9d-0393-48bf-b825-c4085983bb67.png",
+  // 2026 자선냄비 나눔 AI 영상공모전 | 포스터 확인 출처: https://www.goodnews1.com/news/articleView.html?idxno=464966
+  "https://www.thesalvationarmy.or.kr/story/news/3341?uid=news&page=0&text=": "https://cdn.goodnews1.com/news/photo/202610/464966_6077039_320.png",
+  // 2026 고성 해양심층수 AI브랜드 영상 공모전 | 포스터 확인 출처: https://www.nnewss.com/news/articleView.html?idxno=6937
+  "https://form.naver.com/response/4bquVsvgFw2": "https://cdn.nnewss.com/news/photo/202609/6937_20036_4259.png"
 };
