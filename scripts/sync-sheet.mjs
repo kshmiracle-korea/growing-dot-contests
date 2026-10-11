@@ -1,5 +1,6 @@
 import {createHash, sign} from 'node:crypto';
 import {readFile, writeFile, appendFile} from 'node:fs/promises';
+import {spawnSync} from 'node:child_process';
 import {pathToFileURL} from 'node:url';
 
 const SHEET_ID = '1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw';
@@ -85,12 +86,16 @@ export async function main() {
   const target = 'growing-dot-upload/snapshot.js';
   const existing = previousItems(await readFile(target, 'utf8'));
   const token = await accessToken();
-  const items = await readPublicColumns(token);
+  let items = await readPublicColumns(token);
   // Two consecutive reads guard against catching a row edit in progress.
   // This is not a collection-complete signal; that must come from the collector.
   const confirmation = await readPublicColumns(token);
   if (JSON.stringify(items) !== JSON.stringify(confirmation)) throw new Error('Source changing during read; preserve published site');
   assertNoRecordLoss(items, existing);
+  const posters = spawnSync('python', ['scripts/cache-posters.py'], {input: JSON.stringify({items, previous: existing}), encoding: 'utf8', maxBuffer: 10 * 1024 * 1024, env: {...process.env, PYTHONIOENCODING: 'utf-8'}});
+  if (posters.stderr) process.stderr.write(posters.stderr);
+  if (posters.status !== 0) throw new Error('Poster verification failed; published website preserved');
+  items = JSON.parse(posters.stdout);
   const changed = JSON.stringify(items) !== JSON.stringify(existing);
   if (changed) {
     const data = snapshotText(items, koreanDay());
