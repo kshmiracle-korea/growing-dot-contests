@@ -1,5 +1,6 @@
 """Cache verified public posters; never publish a row without a usable image."""
 import hashlib
+import base64
 import io
 import ipaddress
 import json
@@ -42,6 +43,17 @@ def cache(value):
         return value
     target = './posters/' + hashlib.sha256(value.encode()).hexdigest()[:24] + '.jpg'
     if local_image(target):
+        return target
+    # Verified local copies bootstrap sources that reject hosted runners.
+    seeds = Path('poster-seeds.json')
+    saved = json.loads(seeds.read_text(encoding='utf-8')) if seeds.exists() else {}
+    if value in saved:
+        raw = base64.b64decode(saved[value], validate=True)
+        with Image.open(io.BytesIO(raw)) as check:
+            check.verify()
+        path = ROOT / target[2:]
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(raw)
         return target
     request = urllib.request.Request(public_url(value), headers={'User-Agent': 'GrowingDotPosterCache/1.0'})
     with urllib.request.build_opener(PublicRedirect()).open(request, timeout=30) as response:
