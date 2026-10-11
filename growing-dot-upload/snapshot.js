@@ -1,10 +1,9 @@
-// 원본: 1번 Google Sheet의 공모전 관리 탭. 마감 기록도 보존합니다.
 window.CONTEST_SNAPSHOT = {
   "ok": true,
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-12",
   "source": {
     "spreadsheetId": "1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw",
-    "sheetName": "공모전 관리"
+    "sheet": "공모전 관리"
   },
   "items": [
     {
@@ -178,7 +177,7 @@ window.CONTEST_SNAPSHOT = {
       "topic": "기억과 약속, 생명·안전의 가치를 생성형 AI 30초 이내 세로형 숏폼으로 표현",
       "eligibility": "시민 누구나",
       "url": "https://416foundation.org/notice/?mod=document&uid=3604",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "4·16재단 / 4.16생명안전비엔날레",
       "startDate": "2026-09-29",
       "image": ""
