@@ -4,3 +4,14 @@
 .logo-crop{position:relative;display:block;width:270px;aspect-ratio:940/128;overflow:hidden;background:#fff}.logo-crop img{position:absolute;max-width:none;width:154.043%;height:auto;left:-31.915%;top:-421.875%}.header-inner{padding-top:25px;padding-bottom:25px}.header-note{color:#47725e}.heading{padding-top:40px;padding-bottom:32px}h1{font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.4}.intro{max-width:770px;line-height:1.85}.notice:not(.error){background:#f1f6f2;border-color:#7ba98c;color:#4f6b5e}.summary>span:first-child{color:#087251}.poster{border:0;background:#edf3ef;border-radius:8px}.editorial-cover{display:block;width:100%;height:100%;background:#edf3ef}.editorial-cover img{width:100%;height:100%;object-fit:cover;background:transparent}.badge{background:#083d32}.badge.urgent{background:#fff;color:#914023;box-shadow:0 2px 10px #0002}.badge.closed{background:#58635e}.mobile-break{display:none}.official{font-weight:650}.card h3{margin-top:15px}footer strong{color:#075c47}@media(max-width:760px){.logo-crop{width:230px}.heading{padding-top:30px}.mobile-break{display:initial}.intro{font-size:.9375rem}}@media(max-width:420px){.poster{aspect-ratio:1}.logo-crop{width:210px}h1{font-size:1.75rem}}
 
 .poster .official-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f5f6f7}.poster-link:hover .official-poster{transform:none}
+
+/* Expanded sheet details and a separate, initially collapsed archive. */
+.contest-details{margin:0 0 14px;font-size:.8125rem;line-height:1.65}
+.detail-row{display:grid;grid-template-columns:6em minmax(0,1fr);gap:8px;margin:0 0 7px}
+.detail-row dt{color:var(--muted)}.detail-row dd{margin:0;overflow-wrap:anywhere;word-break:keep-all}
+.contest-status{font-weight:700;color:var(--accent)}
+.official{padding:8px 13px;border:1px solid #b6cfc2;border-radius:7px;background:#f5faf7;min-height:40px}
+.archive{margin-top:48px;padding-top:24px;border-top:1px solid var(--line)}
+.archive-toggle{padding:12px 18px;min-height:44px;border:1px solid #b6cfc2;border-radius:8px;background:#f1f6f2;color:#075c47;font-weight:650}
+.archive-toggle:hover{background:#e5f0e9}#archive-panel{margin-top:28px}
+.archive-note{font-size:.875rem;line-height:1.7;color:var(--muted);margin:10px 0 24px}
