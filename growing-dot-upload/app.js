@@ -20,7 +20,7 @@
   }
   function safeUrl(value, image = false) {
     try {
-      if (image && /^\.\/contest-\d+\.(png|jpg|webp)$/.test(String(value))) return new URL(value, location.href).href;
+      if (image && /^\.\/(?:contest-\d+\.(png|jpg|webp)|posters\/[a-f0-9]{24}\.jpg)$/.test(String(value))) return new URL(value, location.href).href;
       const u = new URL(String(value || ''));
       return (u.protocol === 'https:' || (!image && u.protocol === 'http:')) && !u.username && !u.password ? u.href : '';
     } catch { return ''; }
