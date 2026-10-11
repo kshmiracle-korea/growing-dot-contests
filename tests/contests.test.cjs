@@ -79,7 +79,7 @@ test('open before upcoming, deadline order, stale status and missing dates', () 
 test('posters and missing/error fallback retained; unsafe links rejected', () => {
   const {nodes} = setup();
   const images = all(nodes.contests).filter(x => x.className === 'official-poster');
-  assert.equal(images.length, 20);
+  assert.equal(images.length, 22);
   const img = images[0], placeholder = img.parent.children[0];
   img.onload(); assert.equal(placeholder.hidden, true);
   img.onerror(); assert.equal(placeholder.hidden, false);
