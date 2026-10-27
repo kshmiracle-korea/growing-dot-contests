@@ -422,7 +422,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "마감",
       "organizer": "(사)부천국제판타스틱영화제 / AI영상교육센터부천",
       "startDate": "2026-07-12",
-      "image": ""
+      "image": "./posters/7cfec10a7cb61d1aaf76d112.jpg"
     },
     {
       "title": "2026 KoMaP AI 경진대회",
@@ -433,7 +433,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "마감",
       "organizer": "산업통상부·한국산업기술진흥원 / 한국전자통신연구원·한국재료연구원",
       "startDate": "2026-09-03",
-      "image": ""
+      "image": "./posters/d157f36c7030f9566704e86a.jpg"
     },
     {
       "title": "2026 AI 농산물 가격예측 온라인 해커톤",
@@ -444,7 +444,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "마감",
       "organizer": "한국농수산식품유통공사(aT) / (주)상상력집단",
       "startDate": "2026-09-07",
-      "image": ""
+      "image": "./posters/1acec769f6eee0268db1fc8c.jpg"
     },
     {
       "title": "2026년 완주군 사진·AI영상 공모전 (AI영상 부문)",
@@ -455,7 +455,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "전북특별자치도 완주군",
       "startDate": "2026-09-04",
-      "image": ""
+      "image": "./posters/0174f5446255c168e35f97ef.jpg"
     },
     {
       "title": "AI와 소방안전의 융합, 일상을 지키는 재난안전 숏폼 공모전",
@@ -466,7 +466,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "세종사이버대학교 소방방재학과·소방행정학과",
       "startDate": "2026-09-07",
-      "image": ""
+      "image": "./posters/68d5ccb358602314b36cfa81.jpg"
     },
     {
       "title": "2026 AI 활용 숏폼 영상 공모전 「나의 공단, 나의 이야기」",
@@ -477,7 +477,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "종로구시설관리공단",
       "startDate": "2026-10-01",
-      "image": ""
+      "image": "./posters/d1b65144c8261cb54c1c71ae.jpg"
     },
     {
       "title": "2026 DATA·AI 분석 경진대회 (문제해결 부문)",
@@ -488,7 +488,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "과학기술정보통신부 등 유관기관 / 한국과학기술정보연구원(KISTI)",
       "startDate": "2026-09-15",
-      "image": ""
+      "image": "./posters/8896fe8f71bf230f9ad54c46.jpg"
     },
     {
       "title": "의정부도시공사 AI 혁신 아이디어 공모전",
@@ -499,7 +499,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "의정부도시공사",
       "startDate": "2026-09-15",
-      "image": ""
+      "image": "./posters/709f781a19733a91c2c1235d.jpg"
     },
     {
       "title": "제3회 송파 글로벌 AI영화음악 축제",
@@ -510,7 +510,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "AI영화조직위원회 / AI융합산업협회·Global K",
       "startDate": "2026-09-15",
-      "image": ""
+      "image": "./posters/fb2bbf9c95ab8fa2ad8be7aa.jpg"
     },
     {
       "title": "Meta와 함께하는 AI 페스티벌 「AI로 그려낸 가족 이야기」",
@@ -521,7 +521,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "(사)디지털리터러시협회 / Meta 후원",
       "startDate": "2026-07-01",
-      "image": ""
+      "image": "./posters/7a21cb01548e512f78e7fe0b.jpg"
     },
     {
       "title": "2026 데이터+AI 혁신 챌린지 (데이터 문제해결 부문)",
@@ -532,7 +532,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "마감",
       "organizer": "과학기술정보통신부 / 한국데이터산업진흥원",
       "startDate": "2026-09-08",
-      "image": ""
+      "image": "./posters/0657ae13f9025d7d0a20c9c6.jpg"
     },
     {
       "title": "2026 제14회 빅콘테스트 AI·데이터 경진대회",
@@ -554,7 +554,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "마감",
       "organizer": "하이라이트TV(서울에스티비)",
       "startDate": "2026-10-07",
-      "image": ""
+      "image": "./posters/eb79914ee96ce951f4b9500a.jpg"
     },
     {
       "title": "항만 문제해결을 위한 AI 기술 공모전",
@@ -565,7 +565,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "해양수산부 / 울산항만공사·한국정보산업연합회 (데이콘 운영)",
       "startDate": "2026-09-30",
-      "image": ""
+      "image": "./posters/65736c08c5d4802c728d14e1.jpg"
     },
     {
       "title": "2026 부산 관광·마이스 창업 글로컬 트래블톤 (AI 기술혁신 분야)",
@@ -576,7 +576,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "부산광역시·부산관광공사·RISE 협약 대학",
       "startDate": "2026-10-06",
-      "image": ""
+      "image": "./posters/528c80696d16763d2481366d.jpg"
     },
     {
       "title": "Hello World AI 해커톤",
@@ -587,7 +587,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "HACK:ON(해커온) / LOOKIE 5개 대학 창업동아리 연합",
       "startDate": "2026-10-13",
-      "image": ""
+      "image": "./posters/59256f346b3b1f2d1fe8fdec.jpg"
     },
     {
       "title": "Build With AI: Basics — Devpost 글로벌 AI 해커톤",
@@ -598,7 +598,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "마감",
       "organizer": "Devpost, Inc.",
       "startDate": "2026-09-22",
-      "image": ""
+      "image": "./posters/dd20b000df9232fe56374405.jpg"
     },
     {
       "title": "제15회 도로경관디자인 대전 (AI 활용 부문)",
@@ -609,7 +609,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "한국도로공사",
       "startDate": "2026-08-24",
-      "image": ""
+      "image": "./posters/927335ead788a69078a96098.jpg"
     },
     {
       "title": "전국민 AI 경진대회 뮤직비디오 제작 이벤트 「모두의 프로듀서」 시즌2",
@@ -631,7 +631,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "과학기술정보통신부 / 정보통신산업진흥원·한국정보통신기술협회",
       "startDate": "2026-09-28",
-      "image": ""
+      "image": "./posters/d3555e000c900a12920fd01d.jpg"
     },
     {
       "title": "세종사이버대학교 국방융합학과 AI 영상 숏폼·광고 공모전",
@@ -642,7 +642,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "세종사이버대학교 국방융합학과",
       "startDate": "2026-05-27",
-      "image": ""
+      "image": "./posters/596faa4d944d711a47f8a6db.jpg"
     },
     {
       "title": "세종사이버대학교 AI학과 2026 일상의 편리를 위한 AI서비스개발 공모전",
@@ -653,7 +653,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 예정",
       "organizer": "세종사이버대학교 AI학과",
       "startDate": "2026-11-23",
-      "image": ""
+      "image": "./posters/1d72241aba6b4cdb0a6ccd77.jpg"
     },
     {
       "title": "세종사이버대학교 일상을 바꿀 생성형 AI·AI 에이전트 활용 공모전",
@@ -664,7 +664,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "세종사이버대학교 AI응용소프트웨어공학과",
       "startDate": "2026-10-19",
-      "image": ""
+      "image": "./posters/6348e4a6517aa881ba6a89ee.jpg"
     },
     {
       "title": "2026 AI 업무생산성 혁신 사례 공모전",
@@ -675,7 +675,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "마감",
       "organizer": "세종사이버대학교 경영학과",
       "startDate": "",
-      "image": ""
+      "image": "./posters/3da27020110f0f0f242bf8c7.jpg"
     },
     {
       "title": "K-빌런의 21세기 서울 상륙 작전 AI 콘텐츠 공모전",
@@ -686,7 +686,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "세종사이버대학교 AI실무활용학과·AI창작학과·만화애니메이션학과",
       "startDate": "2026-10-19",
-      "image": ""
+      "image": "./posters/b2efbec35ac51d3ae6d5bd81.jpg"
     },
     {
       "title": "2026 사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회",
@@ -708,7 +708,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "광양시 / 광양시청 홍보소통실",
       "startDate": "2026-10-26",
-      "image": ""
+      "image": "./posters/979a03a24c4997c4d776fd5b.jpg"
     },
     {
       "title": "2026 대구광역시 기후·환경·탄소중립 공공 데이터 AI 활용대회",
@@ -730,7 +730,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "조달청",
       "startDate": "2026-10-12",
-      "image": ""
+      "image": "./posters/d17343738ff9cefdee0bafef.jpg"
     },
     {
       "title": "2026 전국민 AI 경진대회 로보틱스 작품공모전 (Track C)",
@@ -752,7 +752,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "과학기술정보통신부 / 정보통신산업진흥원·한국정보통신기술협회",
       "startDate": "2026-10-15",
-      "image": ""
+      "image": "./posters/3d6fcabedc284d746b6fa16a.jpg"
     }
   ]
 };
