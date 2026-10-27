@@ -543,7 +543,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "마감",
       "organizer": "과학기술정보통신부 / 한국정보통신진흥협회(KAIT)",
       "startDate": "2026-09-08",
-      "image": ""
+      "image": "./posters/d4a080844551754abcec1ebf.jpg"
     },
     {
       "title": "제7회 하이라이트TV AI 공모전",
@@ -719,7 +719,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "대구광역시 탄소중립지원센터 / 대구광역시·대구정책연구원",
       "startDate": "2026-10-12",
-      "image": ""
+      "image": "./posters/7db3991f376db98c4160c428.jpg"
     },
     {
       "title": "2026 조달청 AI 게임·콘텐츠 공모전",
