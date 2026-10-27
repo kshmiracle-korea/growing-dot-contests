@@ -1,44 +1,11 @@
 window.CONTEST_SNAPSHOT = {
   "ok": true,
-  "updatedAt": "2026-10-12",
+  "updatedAt": "2026-10-28",
   "source": {
     "spreadsheetId": "1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw",
     "sheet": "공모전 관리"
   },
   "items": [
-    {
-      "title": "2026 국립과천과학관 AI 활용 숏폼 공모전",
-      "deadline": "2026-10-16",
-      "topic": "생성형 AI 활용 과학관·전시 연계 숏폼 영상",
-      "eligibility": "전 연령 / 개인 또는 4인 이내 팀",
-      "url": "https://www.sciencecenter.go.kr/event/2026/ai-shortform-contest/",
-      "status": "접수 중",
-      "organizer": "국립과천과학관",
-      "startDate": "2026-08-25",
-      "image": "./contest-01.png"
-    },
-    {
-      "title": "[네이버플러스 스토어] 2026 넾다세일 AI 광고제",
-      "deadline": "2026-10-14",
-      "topic": "AI 영상 광고 제작",
-      "eligibility": "만 14세 이상 대한민국 거주자 / 개인",
-      "url": "https://blog.naver.com/naverofficial/224421149097",
-      "status": "접수 중",
-      "organizer": "네이버플러스 스토어",
-      "startDate": "2026-09-23",
-      "image": "./contest-02.png"
-    },
-    {
-      "title": "2026 청주영상위원회 AI 영상 공모전",
-      "deadline": "2026-10-12",
-      "topic": "AI 기술을 활용한 청주 소재 스토리 영상",
-      "eligibility": "대한민국 국민 누구나 / 개인 또는 팀",
-      "url": "https://www.cfcm.kr/home/sub.php?menukey=74&mod=view&no=5379&page=16&scode=00000004",
-      "status": "접수 중",
-      "organizer": "청주시 / 청주영상위원회(청주시문화산업진흥재단)",
-      "startDate": "2026-09-21",
-      "image": "./contest-03.jpg"
-    },
     {
       "title": "2026 제2회 삼척시 AI 영상제",
       "deadline": "2026-10-07",
@@ -51,15 +18,70 @@ window.CONTEST_SNAPSHOT = {
       "image": "./contest-04.png"
     },
     {
-      "title": "2026년 제4회 청소년 안전 AI 영상 공모전",
-      "deadline": "2026-11-08",
-      "topic": "AI로 상상하는 청소년의 안전한 미래 / 1분 미만 AI 활용 영상",
-      "eligibility": "서울시민 누구나 / 개인 또는 학교·청소년시설 등 소속 단위",
-      "url": "https://www.sy0404.or.kr/bbs/board.php?bo_table=notice&wr_id=1463",
-      "status": "접수 중",
-      "organizer": "서울특별시립청소년활동진흥센터",
-      "startDate": "2026-09-03",
-      "image": "./contest-05.png"
+      "title": "2026 청주영상위원회 AI 영상 공모전",
+      "deadline": "2026-10-12",
+      "topic": "AI 기술을 활용한 청주 소재 스토리 영상",
+      "eligibility": "대한민국 국민 누구나 / 개인 또는 팀",
+      "url": "https://www.cfcm.kr/home/sub.php?menukey=74&mod=view&no=5379&page=16&scode=00000004",
+      "status": "마감",
+      "organizer": "청주시 / 청주영상위원회(청주시문화산업진흥재단)",
+      "startDate": "2026-09-21",
+      "image": "./contest-03.jpg"
+    },
+    {
+      "title": "[네이버플러스 스토어] 2026 넾다세일 AI 광고제",
+      "deadline": "2026-10-14",
+      "topic": "AI 영상 광고 제작",
+      "eligibility": "만 14세 이상 대한민국 거주자 / 개인",
+      "url": "https://blog.naver.com/naverofficial/224421149097",
+      "status": "마감",
+      "organizer": "네이버플러스 스토어",
+      "startDate": "2026-09-23",
+      "image": "./contest-02.png"
+    },
+    {
+      "title": "2026 국립과천과학관 AI 활용 숏폼 공모전",
+      "deadline": "2026-10-16",
+      "topic": "생성형 AI 활용 과학관·전시 연계 숏폼 영상",
+      "eligibility": "전 연령 / 개인 또는 4인 이내 팀",
+      "url": "https://www.sciencecenter.go.kr/event/2026/ai-shortform-contest/",
+      "status": "마감",
+      "organizer": "국립과천과학관",
+      "startDate": "2026-08-25",
+      "image": "./contest-01.png"
+    },
+    {
+      "title": "2026년 인공지능(AI) 활용 청소년활동 안전공모전",
+      "deadline": "2026-10-12",
+      "topic": "AI 활용 청소년활동 안전콘텐츠 / 재난·청소년활동·생활·디지털·심리정서 안전",
+      "eligibility": "모든 국민 / 개인 또는 단체(팀), 기관 참가 가능",
+      "url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36764",
+      "status": "마감",
+      "organizer": "한국청소년활동진흥원",
+      "startDate": "2026-09-11",
+      "image": "./posters/f1255dfce4bdb03d53006288.jpg"
+    },
+    {
+      "title": "AI(爱)로 여는 미래·중한 청년 AI 숏폼 영상 공모전",
+      "deadline": "2026-10-12",
+      "topic": "AI 전면·보조 활용 한중 문화교류·우호·협력 숏폼 영상(30초~10분)",
+      "eligibility": "한국·중국 만 40세 이하 청년(학생 신분 불필요) / 개인 또는 팀",
+      "url": "https://www.ajudaily.com/event/ai_contest.php",
+      "status": "마감",
+      "organizer": "주한중국대사관·아주뉴스코퍼레이션 / 아주일보",
+      "startDate": "2026-08-26",
+      "image": "./posters/378c5c7dce32913e98f5c5ff.jpg"
+    },
+    {
+      "title": "2026 AI 활용 저작권 콘텐츠 공모전",
+      "deadline": "2026-10-25",
+      "topic": "생성형 AI 활용 이미지·숏폼 영상 / 저작권 관련 자유주제",
+      "eligibility": "대한민국 국민 누구나",
+      "url": "https://www.copyright.or.kr/notify/notice/view.do?brdctsno=55950",
+      "status": "마감",
+      "organizer": "한국저작권위원회",
+      "startDate": "2026-09-21",
+      "image": "./contest-07.png"
     },
     {
       "title": "2026년 국가정책연구포털 AI 쇼츠 영상공모전",
@@ -73,26 +95,15 @@ window.CONTEST_SNAPSHOT = {
       "image": "./contest-06.png"
     },
     {
-      "title": "2026 AI 활용 저작권 콘텐츠 공모전",
-      "deadline": "2026-10-25",
-      "topic": "생성형 AI 활용 이미지·숏폼 영상 / 저작권 관련 자유주제",
-      "eligibility": "대한민국 국민 누구나",
-      "url": "https://www.copyright.or.kr/notify/notice/view.do?brdctsno=55950",
+      "title": "2026년 제4회 청소년 안전 AI 영상 공모전",
+      "deadline": "2026-11-08",
+      "topic": "AI로 상상하는 청소년의 안전한 미래 / 1분 미만 AI 활용 영상",
+      "eligibility": "서울시민 누구나 / 개인 또는 학교·청소년시설 등 소속 단위",
+      "url": "https://www.sy0404.or.kr/bbs/board.php?bo_table=notice&wr_id=1463",
       "status": "접수 중",
-      "organizer": "한국저작권위원회",
-      "startDate": "2026-09-21",
-      "image": "./contest-07.png"
-    },
-    {
-      "title": "2026 별별화성 Awards AI CF 공모전",
-      "deadline": "2026-10-18",
-      "topic": "생성형 AI 활용 화성특례시 홍보 콘텐츠: AI 숏폼·AI CF·AI CM송",
-      "eligibility": "대한민국 거주 누구나 / 개인 또는 팀",
-      "url": "https://aihscity.com/",
-      "status": "접수 중",
-      "organizer": "화성특례시",
-      "startDate": "2026-09-21",
-      "image": "./contest-08.jpg"
+      "organizer": "서울특별시립청소년활동진흥센터",
+      "startDate": "2026-09-03",
+      "image": "./contest-05.png"
     },
     {
       "title": "2026 고용24 국민참여 AI 고용서비스 발굴 온라인 해커톤",
@@ -100,10 +111,32 @@ window.CONTEST_SNAPSHOT = {
       "topic": "AI를 활용한 신규·개선 고용24 서비스 기획 및 MVP 개발",
       "eligibility": "만 19세 이상 대한민국 국민(국내 거주) / 개인 또는 2~4인 팀 / 기업 제외",
       "url": "https://www.keis.or.kr/keis/ko/bbs/225/detail.do?pageIndex=1&pstSn=64437",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "고용노동부 / 한국고용정보원",
       "startDate": "2026-09-21",
       "image": "./contest-09.jpg"
+    },
+    {
+      "title": "2026년 울산광역시 U잼 영상 공모전 (AI영상 부문)",
+      "deadline": "2026-10-16",
+      "topic": "울산 홍보 자유주제 영상 / AI영상 부문 별도 운영",
+      "eligibility": "대한민국 국민 누구나 / 개인 또는 4인 이하 팀",
+      "url": "https://www.ulsan.go.kr/u/rep/transfer/notice/46545.ulsan?gosiGbn=A&mId=001004002000000000",
+      "status": "마감",
+      "organizer": "울산광역시",
+      "startDate": "2026-10-01",
+      "image": "./posters/695f0c9af73651693d243ead.jpg"
+    },
+    {
+      "title": "2026 별별화성 Awards AI CF 공모전",
+      "deadline": "2026-10-18",
+      "topic": "생성형 AI 활용 화성특례시 홍보 콘텐츠: AI 숏폼·AI CF·AI CM송",
+      "eligibility": "대한민국 거주 누구나 / 개인 또는 팀",
+      "url": "https://aihscity.com/",
+      "status": "마감",
+      "organizer": "화성특례시",
+      "startDate": "2026-09-21",
+      "image": "./contest-08.jpg"
     },
     {
       "title": "2026 데이터+AI 혁신 챌린지: 데이터안심구역 경진대회",
@@ -111,10 +144,32 @@ window.CONTEST_SNAPSHOT = {
       "topic": "데이터안심구역 미개방데이터 분석·활용 아이디어 및 AI·데이터 혁신",
       "eligibility": "데이터 분석 및 활용에 관심 있는 누구나 / 개인 또는 5인 이내 팀",
       "url": "https://dsz.kdata.or.kr/",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "과학기술정보통신부 / 한국데이터산업진흥원",
       "startDate": "2026-09-01",
       "image": "./contest-10.jpg"
+    },
+    {
+      "title": "2026년도 제44회 AI 교통안전 홍보작품 공모전",
+      "deadline": "2026-10-18",
+      "topic": "AI 활용 어린이·고령자 교통안전 광고영상·숏폼·광고포스터",
+      "eligibility": "전 국민 누구나 / 개인 또는 3인 이내 팀",
+      "url": "https://www.koroad-contest.kr/",
+      "status": "마감",
+      "organizer": "한국도로교통공단",
+      "startDate": "2026-08-28",
+      "image": "./posters/51744d44d09942b3f3f5d29c.jpg"
+    },
+    {
+      "title": "2026 국립공원 위성 모니터링 AI 챌린지",
+      "deadline": "2026-10-06",
+      "topic": "위성영상·AI 기반 국립공원 모니터링 모델 개발 / 시설물 변화·해안 쓰레기 탐지 등",
+      "eligibility": "14세 이상 대한민국 국민 누구나 / 개인 또는 최대 5인 팀",
+      "url": "https://aifactory.space/ko/page/knps",
+      "status": "마감",
+      "organizer": "국립공원공단",
+      "startDate": "2026-07-31",
+      "image": "./contest-13.png"
     },
     {
       "title": "2026년 항공기상 아이디업(UP) 공모전",
@@ -139,111 +194,12 @@ window.CONTEST_SNAPSHOT = {
       "image": "./contest-12.jpg"
     },
     {
-      "title": "2026 국립공원 위성 모니터링 AI 챌린지",
-      "deadline": "2026-10-06",
-      "topic": "위성영상·AI 기반 국립공원 모니터링 모델 개발 / 시설물 변화·해안 쓰레기 탐지 등",
-      "eligibility": "14세 이상 대한민국 국민 누구나 / 개인 또는 최대 5인 팀",
-      "url": "https://aifactory.space/ko/page/knps",
-      "status": "마감",
-      "organizer": "국립공원공단",
-      "startDate": "2026-07-31",
-      "image": "./contest-13.png"
-    },
-    {
-      "title": "2026 AI 영상 콘텐츠 공모전 「탄소, 다시 보다」",
-      "deadline": "2026-10-19",
-      "topic": "생성형 AI를 활용한 탄소소재 이미지·영상 콘텐츠 제작",
-      "eligibility": "탄소산업에 관심 있는 대학(원)생·일반인",
-      "url": "http://carbon-c.co.kr/",
-      "status": "접수 중",
-      "organizer": "한국탄소산업진흥원",
-      "startDate": "2026-09-29",
-      "image": "./contest-14.png"
-    },
-    {
-      "title": "2026 대구정원박람회 AI 아트 챌린지",
-      "deadline": "2026-10-27",
-      "topic": "생성형 AI로 상상한 정원과 공간을 표현하는 AI 아트 작품",
-      "eligibility": "대구정원박람회에 관심 있는 누구나",
-      "url": "https://www.dggardenshow.kr/board/notice/79",
-      "status": "접수 중",
-      "organizer": "대구광역시 / 2026 대구정원박람회",
-      "startDate": "2026-09-10",
-      "image": "./contest-15.png"
-    },
-    {
-      "title": "4.16생명안전비엔날레 생명안전 AI숏폼 공모전",
-      "deadline": "2026-10-11",
-      "topic": "기억과 약속, 생명·안전의 가치를 생성형 AI 30초 이내 세로형 숏폼으로 표현",
-      "eligibility": "시민 누구나",
-      "url": "https://416foundation.org/notice/?mod=document&uid=3604",
-      "status": "마감",
-      "organizer": "4·16재단 / 4.16생명안전비엔날레",
-      "startDate": "2026-09-29",
-      "image": "./posters/0c68047d8fcd9f42c2e3232a.jpg"
-    },
-    {
-      "title": "2026년 인공지능(AI) 활용 청소년활동 안전공모전",
-      "deadline": "2026-10-12",
-      "topic": "AI 활용 청소년활동 안전콘텐츠 / 재난·청소년활동·생활·디지털·심리정서 안전",
-      "eligibility": "모든 국민 / 개인 또는 단체(팀), 기관 참가 가능",
-      "url": "https://www.kywa.or.kr/pressinfo/notice_view.jsp?no=36764",
-      "status": "접수 중",
-      "organizer": "한국청소년활동진흥원",
-      "startDate": "2026-09-11",
-      "image": "./posters/f1255dfce4bdb03d53006288.jpg"
-    },
-    {
-      "title": "AI(爱)로 여는 미래·중한 청년 AI 숏폼 영상 공모전",
-      "deadline": "2026-10-12",
-      "topic": "AI 전면·보조 활용 한중 문화교류·우호·협력 숏폼 영상(30초~10분)",
-      "eligibility": "한국·중국 만 40세 이하 청년(학생 신분 불필요) / 개인 또는 팀",
-      "url": "https://www.ajudaily.com/event/ai_contest.php",
-      "status": "접수 중",
-      "organizer": "주한중국대사관·아주뉴스코퍼레이션 / 아주일보",
-      "startDate": "2026-08-26",
-      "image": "./posters/378c5c7dce32913e98f5c5ff.jpg"
-    },
-    {
-      "title": "고양새일 × 딜라이브 W-ink 영화제 AI 숏폼 공모전",
-      "deadline": "2026-10-12",
-      "topic": "여성의 일·경력·재취업·경력단절 예방을 생성형 AI 숏폼 영상으로 표현",
-      "eligibility": "만 19세 이상 여성 누구나 / 개인 또는 팀",
-      "url": "https://www.kycenter.or.kr/sub3/sub31_view.aspx?b=2927&p=0&head=t&cdt=&txt=",
-      "status": "접수 중",
-      "organizer": "고양여성인력개발센터·고양여성새로일하기센터 / 딜라이브",
-      "startDate": "2026-09-16",
-      "image": "./posters/3db3265f61c291ff82694766.jpg"
-    },
-    {
-      "title": "2026년 울산광역시 U잼 영상 공모전 (AI영상 부문)",
-      "deadline": "2026-10-16",
-      "topic": "울산 홍보 자유주제 영상 / AI영상 부문 별도 운영",
-      "eligibility": "대한민국 국민 누구나 / 개인 또는 4인 이하 팀",
-      "url": "https://www.ulsan.go.kr/u/rep/transfer/notice/46545.ulsan?gosiGbn=A&mId=001004002000000000",
-      "status": "접수 중",
-      "organizer": "울산광역시",
-      "startDate": "2026-10-01",
-      "image": "./posters/695f0c9af73651693d243ead.jpg"
-    },
-    {
-      "title": "2026년도 제44회 AI 교통안전 홍보작품 공모전",
-      "deadline": "2026-10-18",
-      "topic": "AI 활용 어린이·고령자 교통안전 광고영상·숏폼·광고포스터",
-      "eligibility": "전 국민 누구나 / 개인 또는 3인 이내 팀",
-      "url": "https://www.koroad-contest.kr/",
-      "status": "접수 중",
-      "organizer": "한국도로교통공단",
-      "startDate": "2026-08-28",
-      "image": "./posters/51744d44d09942b3f3f5d29c.jpg"
-    },
-    {
       "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
       "deadline": "2026-10-19",
       "topic": "2D 합성 미세구조 이미지로 재료 경도(hardness) 대용값을 예측하는 AI 모델 개발",
       "eligibility": "데이커라면 누구나 / 개인 참가",
       "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "데이콘(DACON)",
       "startDate": "2026-09-29",
       "image": "./posters/b35bfff33ac276c2819815af.jpg"
@@ -254,10 +210,32 @@ window.CONTEST_SNAPSHOT = {
       "topic": "해양심층수의 가치·브랜드·미래를 알리는 AI 활용 30~60초 영상 제작",
       "eligibility": "AI 영상 제작 가능한 만 18세 이상 누구나(일반인 참가 가능)",
       "url": "https://form.naver.com/response/4bquVsvgFw2",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "(재)해양심층수산업고성진흥원",
       "startDate": "2026-09-17",
       "image": "./posters/8e68ee0074385461d6919510.jpg"
+    },
+    {
+      "title": "2026 AI 영상 콘텐츠 공모전 「탄소, 다시 보다」",
+      "deadline": "2026-10-19",
+      "topic": "생성형 AI를 활용한 탄소소재 이미지·영상 콘텐츠 제작",
+      "eligibility": "탄소산업에 관심 있는 대학(원)생·일반인",
+      "url": "http://carbon-c.co.kr/",
+      "status": "마감",
+      "organizer": "한국탄소산업진흥원",
+      "startDate": "2026-09-29",
+      "image": "./contest-14.png"
+    },
+    {
+      "title": "2026 대구정원박람회 AI 아트 챌린지",
+      "deadline": "2026-10-27",
+      "topic": "생성형 AI로 상상한 정원과 공간을 표현하는 AI 아트 작품",
+      "eligibility": "대구정원박람회에 관심 있는 누구나",
+      "url": "https://www.dggardenshow.kr/board/notice/79",
+      "status": "마감",
+      "organizer": "대구광역시 / 2026 대구정원박람회",
+      "startDate": "2026-09-10",
+      "image": "./contest-15.png"
     },
     {
       "title": "한강버스 운항 1주년 AI 영상 & 사진 공모전",
@@ -265,7 +243,7 @@ window.CONTEST_SNAPSHOT = {
       "topic": "한강버스 주제 생성형 AI 영상(30~60초) 및 SNS 사진 공모 / AI 영상 부문",
       "eligibility": "대한민국 국민 누구나 / AI 영상 개인 또는 최대 4인 팀",
       "url": "https://www.hgbus.co.kr/posts/1/310?menuId=10",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "㈜한강버스",
       "startDate": "2026-09-18",
       "image": "./posters/52cec1b5d43238b407d5fd2e.jpg"
@@ -276,7 +254,7 @@ window.CONTEST_SNAPSHOT = {
       "topic": "AI 디자인물·AI 숏폼영상으로 해양안전 및 해양사고 예방 홍보",
       "eligibility": "일반인·학생 등 모든 국민 / AI 디자인물·AI 숏폼 부문은 학생 전용 아님",
       "url": "https://komsa.or.kr/prog/contest/edu/sub03_01_02/list.do",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "해양수산부·해양경찰청·해양안전실천본부 / 한국해양교통안전공단",
       "startDate": "2026-08-24",
       "image": "./posters/6d787a32d5f3f035ea59db8a.jpg"
@@ -287,7 +265,7 @@ window.CONTEST_SNAPSHOT = {
       "topic": "AI 기반 서비스·플랫폼 기획서 제출, 교육·멘토링 연계 해커톤 개발",
       "eligibility": "AI 서비스 구현에 관심 있는 누구나 / 대학(원)생·예비창업자·기업 종사자 등 / 개인 또는 1~3인 팀",
       "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "서울특별시·관악구·금천청년꿈터·서울대학교 앵커사업단 / 데이콘",
       "startDate": "2026-10-06",
       "image": "./posters/cf0d3304597317f423a6ea99.jpg"
@@ -302,28 +280,6 @@ window.CONTEST_SNAPSHOT = {
       "organizer": "한국해양진흥공사",
       "startDate": "2026-09-07",
       "image": "./posters/59342bf06f62f762efe2fbcb.jpg"
-    },
-    {
-      "title": "[BytePlus × AI-Kive] Seedance 2.5 AI 시리즈 제작지원 공모전",
-      "deadline": "2026-10-30",
-      "topic": "생성형 AI 활용 30~60초 시리즈 프롤로그 영상·로그라인·시놉시스 제작",
-      "eligibility": "만 19세 이상 누구나 / 개인 또는 팀; 만 14세 이상 미성년자는 성인 대표가 있는 팀으로만 참가 가능",
-      "url": "https://aikive.com/event/c1f47e0aa9eb45ae9e28305b65c14ce0",
-      "status": "접수 중",
-      "organizer": "BytePlus / ㈜스튜디오프리윌루전·AI-Kive",
-      "startDate": "2026-10-01",
-      "image": "./posters/1031ea4cd620eee749d63f7c.jpg"
-    },
-    {
-      "title": "2026 자선냄비 나눔 AI 영상공모전",
-      "deadline": "2026-10-30",
-      "topic": "구세군 자선냄비 'Light of life(생명의 빛)' 나눔·기부 문화 확산 생성형 AI 영상",
-      "eligibility": "전 국민 / 개인 또는 3인 이하 팀",
-      "url": "https://www.thesalvationarmy.or.kr/story/news/3341?uid=news&page=0&text=",
-      "status": "접수 중",
-      "organizer": "구세군자선냄비본부",
-      "startDate": "2026-10-01",
-      "image": "./posters/8cbc671f8f8f82e624cdbb6c.jpg"
     },
     {
       "title": "2026 AI 활용 사례 공모전 시즌3",
@@ -346,17 +302,6 @@ window.CONTEST_SNAPSHOT = {
       "organizer": "한국마사회",
       "startDate": "2026-10-01",
       "image": "./posters/578a031b6a2bd09ec0caf97c.jpg"
-    },
-    {
-      "title": "2026년 AI 라이프 솔루션 챌린지",
-      "deadline": "2026-10-31",
-      "topic": "일상·사회문제를 해결하는 AI 기반 솔루션 및 시제품(프로토타입) 개발",
-      "eligibility": "전 국민 / 개인·팀·연구기관·스타트업·학생 등 제한 없음",
-      "url": "https://www.keit.re.kr/board.es?mid=a10301010000&bid=0009&act=view&list_no=128385",
-      "status": "접수 중",
-      "organizer": "산업통상부 / 한국산업기술기획평가원(KEIT)",
-      "startDate": "2026-09-30",
-      "image": "./posters/87b7f92b6a97fb5a2c8fefe5.jpg"
     },
     {
       "title": "2026년 제천시 AI 활용 데이터 분석 아이디어 공모전",
@@ -392,6 +337,72 @@ window.CONTEST_SNAPSHOT = {
       "image": "./posters/10ee7edf5194994e866d76c5.jpg"
     },
     {
+      "title": "2026 AI 캐릭터창작공모전",
+      "deadline": "2026-11-20",
+      "topic": "순수 창작 또는 생성형 AI를 활용한 자유주제 캐릭터 디자인·콘텐츠",
+      "eligibility": "고등학생 이상 또는 2010년 이전 출생자 및 법인 기업 / 일반인 참가 가능",
+      "url": "https://www.kocda.org/blank-14",
+      "status": "접수 중",
+      "organizer": "(사)캐릭터디자이너협회",
+      "startDate": "2026-08-18",
+      "image": "./posters/9d8ddd171948ce3dc9a76787.jpg"
+    },
+    {
+      "title": "4.16생명안전비엔날레 생명안전 AI숏폼 공모전",
+      "deadline": "2026-10-11",
+      "topic": "기억과 약속, 생명·안전의 가치를 생성형 AI 30초 이내 세로형 숏폼으로 표현",
+      "eligibility": "시민 누구나",
+      "url": "https://416foundation.org/notice/?mod=document&uid=3604",
+      "status": "마감",
+      "organizer": "4·16재단 / 4.16생명안전비엔날레",
+      "startDate": "2026-09-29",
+      "image": "./posters/0c68047d8fcd9f42c2e3232a.jpg"
+    },
+    {
+      "title": "고양새일 × 딜라이브 W-ink 영화제 AI 숏폼 공모전",
+      "deadline": "2026-10-12",
+      "topic": "여성의 일·경력·재취업·경력단절 예방을 생성형 AI 숏폼 영상으로 표현",
+      "eligibility": "만 19세 이상 여성 누구나 / 개인 또는 팀",
+      "url": "https://www.kycenter.or.kr/sub3/sub31_view.aspx?b=2927&p=0&head=t&cdt=&txt=",
+      "status": "마감",
+      "organizer": "고양여성인력개발센터·고양여성새로일하기센터 / 딜라이브",
+      "startDate": "2026-09-16",
+      "image": "./posters/3db3265f61c291ff82694766.jpg"
+    },
+    {
+      "title": "[BytePlus × AI-Kive] Seedance 2.5 AI 시리즈 제작지원 공모전",
+      "deadline": "2026-10-30",
+      "topic": "생성형 AI 활용 30~60초 시리즈 프롤로그 영상·로그라인·시놉시스 제작",
+      "eligibility": "만 19세 이상 누구나 / 개인 또는 팀; 만 14세 이상 미성년자는 성인 대표가 있는 팀으로만 참가 가능",
+      "url": "https://aikive.com/event/c1f47e0aa9eb45ae9e28305b65c14ce0",
+      "status": "접수 중",
+      "organizer": "BytePlus / ㈜스튜디오프리윌루전·AI-Kive",
+      "startDate": "2026-10-01",
+      "image": "./posters/1031ea4cd620eee749d63f7c.jpg"
+    },
+    {
+      "title": "2026 자선냄비 나눔 AI 영상공모전",
+      "deadline": "2026-10-30",
+      "topic": "구세군 자선냄비 'Light of life(생명의 빛)' 나눔·기부 문화 확산 생성형 AI 영상",
+      "eligibility": "전 국민 / 개인 또는 3인 이하 팀",
+      "url": "https://www.thesalvationarmy.or.kr/story/news/3341?uid=news&page=0&text=",
+      "status": "접수 중",
+      "organizer": "구세군자선냄비본부",
+      "startDate": "2026-10-01",
+      "image": "./posters/8cbc671f8f8f82e624cdbb6c.jpg"
+    },
+    {
+      "title": "2026년 AI 라이프 솔루션 챌린지",
+      "deadline": "2026-10-31",
+      "topic": "일상·사회문제를 해결하는 AI 기반 솔루션 및 시제품(프로토타입) 개발",
+      "eligibility": "전 국민 / 개인·팀·연구기관·스타트업·학생 등 제한 없음",
+      "url": "https://www.keit.re.kr/board.es?mid=a10301010000&bid=0009&act=view&list_no=128385",
+      "status": "접수 중",
+      "organizer": "산업통상부 / 한국산업기술기획평가원(KEIT)",
+      "startDate": "2026-09-30",
+      "image": "./posters/87b7f92b6a97fb5a2c8fefe5.jpg"
+    },
+    {
       "title": "5극3특 성장엔진 미래지도 AI 영상 공모전",
       "deadline": "2026-11-13",
       "topic": "7개 권역의 성장엔진 산업 발전으로 달라질 지역의 미래를 생성형 AI 영상으로 표현",
@@ -403,15 +414,345 @@ window.CONTEST_SNAPSHOT = {
       "image": "./posters/3c1122b36ff8b8aafe53f097.jpg"
     },
     {
-      "title": "2026 AI 캐릭터창작공모전",
-      "deadline": "2026-11-20",
-      "topic": "순수 창작 또는 생성형 AI를 활용한 자유주제 캐릭터 디자인·콘텐츠",
-      "eligibility": "고등학생 이상 또는 2010년 이전 출생자 및 법인 기업 / 일반인 참가 가능",
-      "url": "https://www.kocda.org/blank-14",
+      "title": "제1회 BIFAN × 더만타스토리 AI 숏폼 드라마 대본 공모전",
+      "deadline": "2026-10-15",
+      "topic": "AI 숏폼 드라마 50부작 기획안 및 대본 15회분(회당 약 2분)",
+      "eligibility": "일반인 포함 제한 없음 / 개인 또는 팀(1인 최대 3작품), 업체 명의 참가 불가",
+      "url": "https://www.bifan.kr/community/comm01_view.asp?pk_seq=92414&sc_board_seq=1&sc_num=-2&sc_top_cond=all&actEvent=view&page=1",
+      "status": "마감",
+      "organizer": "(사)부천국제판타스틱영화제 / AI영상교육센터부천",
+      "startDate": "2026-07-12",
+      "image": ""
+    },
+    {
+      "title": "2026 KoMaP AI 경진대회",
+      "deadline": "2026-10-15",
+      "topic": "고탄성 알루미늄 합금 이미지 상 분할 AI 모델 개발",
+      "eligibility": "국내외 거주 대한민국 국민 / 개인 또는 1~4인 팀(본선 현장 발표 가능자)",
+      "url": "https://komap.ai/front/competition2026",
+      "status": "마감",
+      "organizer": "산업통상부·한국산업기술진흥원 / 한국전자통신연구원·한국재료연구원",
+      "startDate": "2026-09-03",
+      "image": ""
+    },
+    {
+      "title": "2026 AI 농산물 가격예측 온라인 해커톤",
+      "deadline": "2026-10-18",
+      "topic": "배추·무·양파·깐마늘·건고추 도매시장 경락가 AI 가격예측 아이디어 및 모델",
+      "eligibility": "나이·소속·전공 제한 없이 누구나 / 개인 또는 4인 이내 팀(팀 내 국내 계좌 보유 내국인 1명 이상)",
+      "url": "https://hackathon.imaginationgroup.co.kr/nongnet",
+      "status": "마감",
+      "organizer": "한국농수산식품유통공사(aT) / (주)상상력집단",
+      "startDate": "2026-09-07",
+      "image": ""
+    },
+    {
+      "title": "2026년 완주군 사진·AI영상 공모전 (AI영상 부문)",
+      "deadline": "2026-10-30",
+      "topic": "AI로 그리는 대도약 완주: 관광명소·축제·랜드마크·미래산업·캠페인 60~120초 AI 영상",
+      "eligibility": "대한민국 국민 누구나 / 개인 또는 팀",
+      "url": "https://www.wanju.go.kr/index.9is?contentUid=ff8080818b024d8e018b274f41dd2af8&subPath=",
       "status": "접수 중",
-      "organizer": "(사)캐릭터디자이너협회",
-      "startDate": "2026-08-18",
-      "image": "./posters/9d8ddd171948ce3dc9a76787.jpg"
+      "organizer": "전북특별자치도 완주군",
+      "startDate": "2026-09-04",
+      "image": ""
+    },
+    {
+      "title": "AI와 소방안전의 융합, 일상을 지키는 재난안전 숏폼 공모전",
+      "deadline": "2026-10-31",
+      "topic": "AI·소방안전 융합 사례 또는 신규 AI 소방안전 기술·서비스 아이디어 30초 숏폼",
+      "eligibility": "세종사이버대학교 재학생·졸업생 및 대한민국 국민 누구나(일반인 참가 가능)",
+      "url": "https://cms.sjcu.ac.kr/fire01/news/notice.do?mode=view&articleNo=138246&article.offset=0&articleLimit=10",
+      "status": "접수 중",
+      "organizer": "세종사이버대학교 소방방재학과·소방행정학과",
+      "startDate": "2026-09-07",
+      "image": ""
+    },
+    {
+      "title": "2026 AI 활용 숏폼 영상 공모전 「나의 공단, 나의 이야기」",
+      "deadline": "2026-10-31",
+      "topic": "종로구시설관리공단 시설·프로그램·안전·배려·ESG 이용 경험 AI 숏폼 영상",
+      "eligibility": "누구나 참여 가능(학생 신분 제한 없음)",
+      "url": "https://www.ijongno.co.kr/www/136?action=read&action-value=106fcd9959f96067785b962b1a65cc24",
+      "status": "접수 중",
+      "organizer": "종로구시설관리공단",
+      "startDate": "2026-10-01",
+      "image": ""
+    },
+    {
+      "title": "2026 DATA·AI 분석 경진대회 (문제해결 부문)",
+      "deadline": "2026-11-06",
+      "topic": "AI·데이터 기반 사회·과학 문제 해결: 수위·감염병·도로결빙·웹 대체텍스트·정책·어선·녹조 등",
+      "eligibility": "데이터 분석·AI 활용에 관심 있는 개인 또는 팀(일반인 참가 가능)",
+      "url": "https://aida.kisti.re.kr/competition/main/competition/COMP_000000000000050/detail.do",
+      "status": "접수 중",
+      "organizer": "과학기술정보통신부 등 유관기관 / 한국과학기술정보연구원(KISTI)",
+      "startDate": "2026-09-15",
+      "image": ""
+    },
+    {
+      "title": "의정부도시공사 AI 혁신 아이디어 공모전",
+      "deadline": "2026-11-08",
+      "topic": "의정부도시공사 업무 전반에 AI를 접목한 혁신·업무 효율화 아이디어",
+      "eligibility": "의정부도시공사에 관심 있는 누구나(일반인 참가 가능)",
+      "url": "https://www.uiuc.or.kr/companyNotice/noticePage/notice/view.do?bbsId=BBSMSTR_000000000001&nttId=5514",
+      "status": "접수 중",
+      "organizer": "의정부도시공사",
+      "startDate": "2026-09-15",
+      "image": ""
+    },
+    {
+      "title": "제3회 송파 글로벌 AI영화음악 축제",
+      "deadline": "2026-11-11",
+      "topic": "AI 영화·AI 웹툰·AI 음악·AI 미술 창작물",
+      "eligibility": "누구나(제한 없음)",
+      "url": "https://ai-film.kr/",
+      "status": "접수 중",
+      "organizer": "AI영화조직위원회 / AI융합산업협회·Global K",
+      "startDate": "2026-09-15",
+      "image": ""
+    },
+    {
+      "title": "Meta와 함께하는 AI 페스티벌 「AI로 그려낸 가족 이야기」",
+      "deadline": "2026-11-15",
+      "topic": "생성형 AI를 활용한 가족 주제 창작: 삽화시·그림책·에세이·웹툰·영상 등",
+      "eligibility": "13세 이상 누구나(일반인 참가 가능)",
+      "url": "https://sites.google.com/cdledu.org/metaaifesta/%EA%B3%B5%EB%AA%A8%EC%A0%84-%EC%86%8C%EA%B0%9C",
+      "status": "접수 중",
+      "organizer": "(사)디지털리터러시협회 / Meta 후원",
+      "startDate": "2026-07-01",
+      "image": ""
+    },
+    {
+      "title": "2026 데이터+AI 혁신 챌린지 (데이터 문제해결 부문)",
+      "deadline": "2026-10-22",
+      "topic": "AI·데이터 문제해결은행의 데이터레시피 제안·문제해결 분석도구 활용",
+      "eligibility": "데이터·AI 활용에 관심 있는 대한민국 국민 누구나 / 개인 또는 5인 이내 팀",
+      "url": "https://www.kdata.or.kr/datahub/portal/support/board/10/48",
+      "status": "마감",
+      "organizer": "과학기술정보통신부 / 한국데이터산업진흥원",
+      "startDate": "2026-09-08",
+      "image": ""
+    },
+    {
+      "title": "2026 제14회 빅콘테스트 AI·데이터 경진대회",
+      "deadline": "2026-10-26",
+      "topic": "기업 데이터 활용 AI·데이터 분석: 기후위기 취약상권·사회적 고립 예방 모델 개발",
+      "eligibility": "대한민국 국민 누구나 / 개인 또는 4인 이내 팀",
+      "url": "https://www.bigcontest.or.kr/",
+      "status": "마감",
+      "organizer": "과학기술정보통신부 / 한국정보통신진흥협회(KAIT)",
+      "startDate": "2026-09-08",
+      "image": ""
+    },
+    {
+      "title": "제7회 하이라이트TV AI 공모전",
+      "deadline": "2026-10-27",
+      "topic": "상상했던 나의 모습을 생성형 AI로 광고톤 영상(30~60초)·쇼츠(30초 이내) 제작",
+      "eligibility": "누구나 / 학생 신분 제한 없음",
+      "url": "http://highlighttv.co.kr/sub/notice.php?boardid=notice&mode=view&idx=86",
+      "status": "마감",
+      "organizer": "하이라이트TV(서울에스티비)",
+      "startDate": "2026-10-07",
+      "image": ""
+    },
+    {
+      "title": "항만 문제해결을 위한 AI 기술 공모전",
+      "deadline": "2026-11-02",
+      "topic": "항만 입출항 신고기록과 표준 선박제원정보를 매칭하는 AI 모델 개발",
+      "eligibility": "국내외 고등·대학(원) 재학생 또는 졸업 후 3년 이내 미취업자(비학생도 참가 가능)",
+      "url": "https://www.dacon.io/competitions/official/236771/overview/description",
+      "status": "접수 중",
+      "organizer": "해양수산부 / 울산항만공사·한국정보산업연합회 (데이콘 운영)",
+      "startDate": "2026-09-30",
+      "image": ""
+    },
+    {
+      "title": "2026 부산 관광·마이스 창업 글로컬 트래블톤 (AI 기술혁신 분야)",
+      "deadline": "2026-10-30",
+      "topic": "AI 기술혁신 기반 부산 관광·마이스 창업 아이디어 발굴 및 사업화 해커톤",
+      "eligibility": "관광·마이스 분야 청년 예비 창업가 / 2인 이상 팀 / 재학생 자격 불필요",
+      "url": "https://tourbiz.bto.or.kr/kor/CMS/Board/Board.do?board_seq=1271&mCode=MN032&mgr_seq=6&mode=view",
+      "status": "접수 중",
+      "organizer": "부산광역시·부산관광공사·RISE 협약 대학",
+      "startDate": "2026-10-06",
+      "image": ""
+    },
+    {
+      "title": "Hello World AI 해커톤",
+      "deadline": "2026-10-30",
+      "topic": "할로윈 테마 AI 활용 개인 개발 해커톤 / 자유주제 앱·프로젝트 제작",
+      "eligibility": "만 14세 이상 누구나(성인·일반인 참가 가능) / 개인전",
+      "url": "https://hackon.kr/e/1a32b615",
+      "status": "접수 중",
+      "organizer": "HACK:ON(해커온) / LOOKIE 5개 대학 창업동아리 연합",
+      "startDate": "2026-10-13",
+      "image": ""
+    },
+    {
+      "title": "Build With AI: Basics — Devpost 글로벌 AI 해커톤",
+      "deadline": "2026-10-27",
+      "topic": "AI 코딩 에이전트·Devpost Learn Skill Pack 활용 실사용 앱 PoC 개발",
+      "eligibility": "한국 거주 성인 포함, 거주국 성년 연령 이상 개인·팀·법인 / 한국 참가 제한 없음",
+      "url": "https://learn-ai-basics.devpost.com/",
+      "status": "마감",
+      "organizer": "Devpost, Inc.",
+      "startDate": "2026-09-22",
+      "image": ""
+    },
+    {
+      "title": "제15회 도로경관디자인 대전 (AI 활용 부문)",
+      "deadline": "2026-10-29",
+      "topic": "생성형 AI를 활용한 고속도로 경관·안전 디자인 / 휴게소 보행자 안전·지하고속도로·생태통로·자유주제",
+      "eligibility": "대한민국 국민 누구나 / 개인 또는 2인 이하 팀 / AI 활용 부문",
+      "url": "https://www.ex-contest.co.kr/design26",
+      "status": "접수 중",
+      "organizer": "한국도로공사",
+      "startDate": "2026-08-24",
+      "image": ""
+    },
+    {
+      "title": "전국민 AI 경진대회 뮤직비디오 제작 이벤트 「모두의 프로듀서」 시즌2",
+      "deadline": "2026-10-31",
+      "topic": "전국민 AI 경진대회 캐릭터 '알고'와 지정 음원 'May I, AI'를 활용한 1분 미만 AI 뮤직비디오",
+      "eligibility": "뮤직비디오 제작에 관심 있는 누구나 / 개인 또는 팀 / 1팀 최대 3작품",
+      "url": "https://aichallenge4all.or.kr/competitions/producer",
+      "status": "접수 중",
+      "organizer": "과학기술정보통신부 / 정보통신산업진흥원·한국과학창의재단·한국지능정보사회진흥원·한국정보통신기술협회",
+      "startDate": "2026-10-01",
+      "image": "./posters/5c35c5c8390136cfa5eb55ba.jpg"
+    },
+    {
+      "title": "2026 전국민 AI 오류찾기 챌린지 시즌3",
+      "deadline": "2026-11-16",
+      "topic": "생성형 AI 사용 중 발생한 사실 오류·잘못된 응답 사례 발굴·검증·제출",
+      "eligibility": "AI 활용에 관심 있는 누구나 / 학생 신분 제한 없음",
+      "url": "https://ai-checker.or.kr/",
+      "status": "접수 중",
+      "organizer": "과학기술정보통신부 / 정보통신산업진흥원·한국정보통신기술협회",
+      "startDate": "2026-09-28",
+      "image": ""
+    },
+    {
+      "title": "세종사이버대학교 국방융합학과 AI 영상 숏폼·광고 공모전",
+      "deadline": "2026-11-12",
+      "topic": "생성형 AI로 국방융합학과의 특성과 국방의 중요성을 표현한 숏폼(10~50초)·광고영상(30초)",
+      "eligibility": "세종사이버대학교 재학생·졸업생 및 고등학교 재학 이상 일반인 / 개인 참가(팀 불가)",
+      "url": "https://edu.sjcu.ac.kr/military/news/notice.do?articleNo=135178&mode=view",
+      "status": "접수 중",
+      "organizer": "세종사이버대학교 국방융합학과",
+      "startDate": "2026-05-27",
+      "image": ""
+    },
+    {
+      "title": "세종사이버대학교 AI학과 2026 일상의 편리를 위한 AI서비스개발 공모전",
+      "deadline": "2026-12-04",
+      "topic": "생성형 AI를 활용해 생활 불편을 해결하는 실행 가능한 웹앱·프로토타입·AI 자동화 서비스 개발",
+      "eligibility": "누구나 / 개인 또는 3인 이하 팀(학생 신분 불필요)",
+      "url": "https://edu.sjcu.ac.kr/artificial-intelligence/community/data.do?articleNo=138524&mode=view",
+      "status": "접수 예정",
+      "organizer": "세종사이버대학교 AI학과",
+      "startDate": "2026-11-23",
+      "image": ""
+    },
+    {
+      "title": "세종사이버대학교 일상을 바꿀 생성형 AI·AI 에이전트 활용 공모전",
+      "deadline": "2026-12-31",
+      "topic": "생성형 AI·AI 에이전트로 생활 문제를 해결하는 실제 작동하는 AI 서비스·노코드 프로토타입 개발",
+      "eligibility": "일반인 및 세종사이버대학교 재학생 / 개인 또는 3인 이하 팀",
+      "url": "https://edu.sjcu.ac.kr/computer/news/notice.do?articleNo=139448&mode=view",
+      "status": "접수 중",
+      "organizer": "세종사이버대학교 AI응용소프트웨어공학과",
+      "startDate": "2026-10-19",
+      "image": ""
+    },
+    {
+      "title": "2026 AI 업무생산성 혁신 사례 공모전",
+      "deadline": "2026-10-25",
+      "topic": "AI를 활용한 업무·학업 생산성 향상 실제 사례 및 전후 효과",
+      "eligibility": "세종사이버대학교 재학생·졸업생 및 일반인 / 개인 또는 팀",
+      "url": "https://edu.sjcu.ac.kr/business/news/notice.do?articleNo=137084&mode=view",
+      "status": "마감",
+      "organizer": "세종사이버대학교 경영학과",
+      "startDate": "",
+      "image": ""
+    },
+    {
+      "title": "K-빌런의 21세기 서울 상륙 작전 AI 콘텐츠 공모전",
+      "deadline": "2026-11-16",
+      "topic": "한국 고전 설화·전래동화 캐릭터 재해석 / AI 이미지·AI 영상·AI 컷툰",
+      "eligibility": "전공생 및 AI 콘텐츠 제작에 관심 있는 일반인 누구나",
+      "url": "https://home.sjcu.ac.kr/ai-creation/community/data.do?articleNo=138854&mode=view",
+      "status": "접수 중",
+      "organizer": "세종사이버대학교 AI실무활용학과·AI창작학과·만화애니메이션학과",
+      "startDate": "2026-10-19",
+      "image": ""
+    },
+    {
+      "title": "2026 사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회",
+      "deadline": "2026-11-20",
+      "topic": "사회보장 데이터·AI 활용 공공서비스 혁신·복지행정·연구 아이디어",
+      "eligibility": "대한민국 국민 누구나 / 개인 또는 팀",
+      "url": "https://wma.co.kr/ax",
+      "status": "접수 중",
+      "organizer": "대구가톨릭대학교·한국사회보장정보원 / 보건복지부 후원",
+      "startDate": "2026-10-21",
+      "image": "./posters/8b641808874795f9abd7b595.jpg"
+    },
+    {
+      "title": "2026 광양시 매돌이 AI 영상 공모전 「매돌이, AI로 살아나다!」",
+      "deadline": "2026-11-06",
+      "topic": "광양시 SNS 캐릭터 매돌이 활용 생성형 AI 홍보 숏폼 영상 제작",
+      "eligibility": "매돌이·광양시에 관심 있는 대한민국 국민 누구나 / 개인 또는 4인 이내 팀",
+      "url": "https://gwangyang.go.kr/saeol/gosi.es?act=view&bid=0022&mid=a10909020000&seq=62191",
+      "status": "접수 중",
+      "organizer": "광양시 / 광양시청 홍보소통실",
+      "startDate": "2026-10-26",
+      "image": ""
+    },
+    {
+      "title": "2026 대구광역시 기후·환경·탄소중립 공공 데이터 AI 활용대회",
+      "deadline": "2026-11-20",
+      "topic": "공공데이터·AI를 활용한 대구 기후·환경·탄소중립 문제 해결 아이디어 및 분석·시각화",
+      "eligibility": "공공데이터·AI에 관심 있는 대한민국 국민 누구나 / 개인 참가",
+      "url": "https://dcnc.or.kr/bbs/board.php?bo_table=notice&wr_id=193",
+      "status": "접수 중",
+      "organizer": "대구광역시 탄소중립지원센터 / 대구광역시·대구정책연구원",
+      "startDate": "2026-10-12",
+      "image": ""
+    },
+    {
+      "title": "2026 조달청 AI 게임·콘텐츠 공모전",
+      "deadline": "2026-11-22",
+      "topic": "조달청·조달정책 소재 AI 게임·AI 시나리오·AI 영상 콘텐츠",
+      "eligibility": "대한민국 국민 누구나 / 개인 또는 팀",
+      "url": "https://blog.naver.com/ppspr/224440256164",
+      "status": "접수 중",
+      "organizer": "조달청",
+      "startDate": "2026-10-12",
+      "image": ""
+    },
+    {
+      "title": "2026 전국민 AI 경진대회 로보틱스 작품공모전 (Track C)",
+      "deadline": "2026-11-02",
+      "topic": "AI·로보틱스 융합을 통한 인간과 로봇의 공존 주제 작품·전시·시연",
+      "eligibility": "분야·계층 제한 없음 / 직접 정비·운용 가능한 로봇 보유 개인 또는 최대 10인 팀",
+      "url": "https://aichallenge4all.or.kr/competitions/ai-robot",
+      "status": "접수 중",
+      "organizer": "과학기술정보통신부 / 한국과학창의재단 등",
+      "startDate": "2026-10-08",
+      "image": "./posters/cc036852d380cd4897647f4a.jpg"
+    },
+    {
+      "title": "2026 AI 달인 100 챌린지 시즌4 (취미·창작)",
+      "deadline": "2026-11-05",
+      "topic": "AI 활용 취미·창작 노하우와 실제 활용 과정을 60초 이내 세로형 숏폼으로 제작",
+      "eligibility": "AI에 관심 있는 일반인 누구나 / 개인 또는 팀",
+      "url": "https://nipa.kr/home/2-1/16927",
+      "status": "접수 중",
+      "organizer": "과학기술정보통신부 / 정보통신산업진흥원·한국정보통신기술협회",
+      "startDate": "2026-10-15",
+      "image": ""
     }
   ]
 };
