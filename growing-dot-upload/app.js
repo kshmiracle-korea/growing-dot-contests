@@ -45,28 +45,8 @@
     el.href = href; el.target = '_blank'; el.rel = 'noopener noreferrer';
     return el;
   }
-  function fallback(item, index) {
-    const palettes = [['#075c47','#ffffff','#a8db72'],['#def0e5','#153b2e','#087251'],['#202526','#ffffff','#acd97e'],['#e9efce','#253b26','#477835']];
-    const [bg,ink,accent] = palettes[index % palettes.length];
-    const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[ch]));
-    const title = item.title.replace(/^2026(?:년)?\s*/, '');
-    const lines = []; let line = '', width = 0;
-    for (const char of title) {
-      const size = /[\u0000-\u007f]/.test(char) ? .55 : 1;
-      if (width + size > 12 && line) {lines.push(line.trim()); line = ''; width = 0;}
-      line += char; width += size;
-    }
-    if (line.trim()) lines.push(line.trim());
-    const visible = lines.slice(0,5);
-    if (lines.length > 5) visible[4] = visible[4].slice(0,-1) + '…';
-    const text = visible.map((part,i) => `<tspan x="40" y="${162+i*46}">${escape(part)}</tspan>`).join('');
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><rect width="512" height="512" fill="${bg}"/><g fill="${accent}"><circle cx="44" cy="42" r="5"/><circle cx="62" cy="42" r="7"/><circle cx="44" cy="60" r="7"/><circle cx="64" cy="62" r="9"/></g><text x="40" y="104" fill="${accent}" font-family="Arial,sans-serif" font-size="16" letter-spacing="2">2026 / AI CONTEST</text><text fill="${ink}" font-family="Malgun Gothic,Apple SD Gothic Neo,sans-serif" font-size="34" font-weight="700">${text}</text><path d="M40 410H472" stroke="${ink}" opacity=".25"/><text x="40" y="445" fill="${ink}" font-family="Arial,sans-serif" font-size="17" letter-spacing="2">GROWING DOT</text><text x="40" y="477" fill="${ink}" font-family="Malgun Gothic,sans-serif" font-size="17" opacity=".8">그로잉 닷 요약 · 공식 포스터 아님</text><circle cx="459" cy="449" r="12" fill="${accent}"/></svg>`;
-    const el = make('div', 'fallback editorial-cover');
-    const img = make('img');
-    img.alt = `${item.title} — 그로잉 닷 제작 요약 썸네일`;
-    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
-    el.append(img);
-    return el;
+  function pendingPoster() {
+    return make('div', 'fallback', '공식 포스터 확인 중');
   }
   function contestState(item, now) {
     const day = dateNumber(item.deadline), start = dateNumber(item.startDate);
@@ -90,12 +70,12 @@
     const closedFragment = document.createDocumentFragment();
     closedCount = 0;
     for (const {item, index, day, left, closed, status} of ordered) {
-      const url = safeUrl(item.url), image = safeUrl(item.image, true) || safeUrl((window.CONTEST_POSTERS || {})[item.url], true);
+      const url = safeUrl(item.url), image = safeUrl(item.image, true);
       const badge = closed ? '마감' : left === null ? '일정 확인' : left === 0 ? 'D-DAY' : `D-${left}`;
       const badgeClass = closed ? 'closed' : left === null ? 'unknown' : left <= 7 ? 'urgent' : '';
       const card = make('article','card');
       const poster = make('div','poster');
-      const placeholder = fallback(item, index);
+      const placeholder = pendingPoster();
       poster.append(placeholder);
       if (image) {
         const banner = bannerCopy[item.url];

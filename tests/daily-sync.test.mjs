@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {publicItems, snapshotText, previousItems, assertNoRecordLoss, koreanDay} from '../scripts/sync-sheet.mjs';
+import {publicItems, snapshotText, previousItems, assertNoRecordLoss, koreanDay, requestJson} from '../scripts/sync-sheet.mjs';
 const header = ['공모전명', '마감일', '분야/주제', '참가 대상', '공모전 URL', '상태', '주최/주관', '접수 시작일'];
 const row = ['Example', '2026. 10. 12.', 'AI', 'Everyone', 'https://example.org', '마감', 'Host', '2026-09-01'];
 test('public schema retains closed contests and images, never accepts additional fields', () => {
@@ -30,4 +30,25 @@ test('Korean dates and existing production snapshot remain readable', async () =
   assert.equal(koreanDay(new Date('2026-10-11T15:00:00Z')), '2026-10-12');
   const old = previousItems(await readFile(new URL('../growing-dot-upload/snapshot.js', import.meta.url), 'utf8'));
   assert.ok(old.length >= 37);
+});
+
+test('Google transient failures retry at most three times; permanent failures stop immediately', async () => {
+  let calls = 0;
+  const sleep = async () => {};
+  const recovered = await requestJson('https://example.org', {}, async () => {
+    calls++;
+    if (calls < 3) throw new TypeError('temporary network error');
+    return {ok: true, status: 200, json: async () => ({ok: true})};
+  }, sleep);
+  assert.equal(recovered.ok, true);
+  assert.equal(calls, 3);
+  for (const [status, expected] of [[503, 3], [429, 3], [403, 1]]) {
+    calls = 0;
+    await assert.rejects(requestJson('https://example.org', {}, async () => {calls++; return {ok: false, status};}, sleep));
+    assert.equal(calls, expected);
+  }
+});
+
+test('an invalid image address is deferred to per-item validation', () => {
+  assert.equal(publicItems([header, row], [['이미지 URL'], ['http://broken.example/poster.jpg']])[0].title, 'Example');
 });

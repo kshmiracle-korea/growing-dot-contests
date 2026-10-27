@@ -1,7 +1,7 @@
 name: Publish Growing Dot
 on:
-  push:
-    branches: [main]
+  # Normal pushes and daily schedules sync and deploy in daily-sheet-sync.yml.
+  # Keep a manual static publication route without racing the daily workflow.
   workflow_dispatch:
 permissions:
   contents: read

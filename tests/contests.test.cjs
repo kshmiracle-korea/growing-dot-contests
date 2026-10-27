@@ -5,7 +5,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 const root = path.join(__dirname, '../growing-dot-upload');
 const code = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
-const snapshotCode = fs.readFileSync(path.join(root, 'snapshot.js'), 'utf8');
+const snapshotCode = fs.readFileSync(path.join(__dirname, 'fixtures/snapshot.js'), 'utf8');
 
 class Element {
   constructor(tag) {this.tag = tag; this.children = []; this.hidden = false; this.attributes = {}; this.style = {}; this.events = {}; this.className = ''; this.classList = {toggle() {}};}
@@ -45,7 +45,7 @@ test('37 rows retained; 34 current, 3 archived, and D-DAY today', () => {
   assert.match(titles(nodes.contests)[0], /4.16/);
   assert.match(nodes.contests.children[0].textContent, /D-DAY/);
   for (const field of ['상태','마감일','분야/주제','참가 대상','주최/주관','접수 시작일','상세보기']) assert.ok(nodes.contests.children[0].textContent.includes(field));
-  assert.match(nodes['sync-label'].textContent, /2026. 10. 11/);
+  assert.match(nodes['sync-label'].textContent, /2026. 10. 12/);
   nodes['archive-toggle'].events.click();
   assert.equal(nodes['archive-panel'].hidden, false);
   assert.equal(nodes['archive-toggle'].attributes['aria-expanded'], 'true');
@@ -76,18 +76,21 @@ test('open before upcoming, deadline order, stale status and missing dates', () 
   assert.deepEqual(titles(page.nodes['closed-contests']), ['Archived']);
   assert.match(page.nodes['sync-label'].textContent, /2026. 10. 10/);
 });
-test('posters and missing/error fallback retained; unsafe links rejected', () => {
+test('actual posters retained; missing/broken images never become generated thumbnails', () => {
   const {nodes} = setup();
   const images = all(nodes.contests).filter(x => x.className === 'official-poster');
-  assert.equal(images.length, 22);
+  assert.equal(images.length, 34);
   const img = images[0], placeholder = img.parent.children[0];
   img.onload(); assert.equal(placeholder.hidden, true);
   img.onerror(); assert.equal(placeholder.hidden, false);
   assert.ok(!img.parent.children.includes(img));
-  assert.ok(all(nodes.contests.children[0]).some(x => x.className.includes('editorial-cover')));
+  assert.match(placeholder.textContent, /공식 포스터 확인 중/);
+  assert.equal(all(nodes.contests).filter(x => x.tag === 'img' && String(x.src).startsWith('data:')).length, 0);
   const page = setup(undefined, {ok: true, items: [{title: '<script>literal</script>', url: 'javascript:alert(1)', image: 'javascript:alert(1)'}]});
   assert.equal(all(page.nodes.contests).filter(x => x.tag === 'a').length, 0);
   assert.equal(all(page.nodes.contests).filter(x => x.className === 'official-poster').length, 0);
+  assert.equal(all(page.nodes.contests).filter(x => x.tag === 'img').length, 0);
+  assert.match(page.nodes.contests.textContent, /공식 포스터 확인 중/);
 });
 test('empty feed and all-closed feed have accurate empty states', () => {
   const empty = setup(undefined, {ok: true, items: []});

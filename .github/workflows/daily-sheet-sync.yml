@@ -1,5 +1,7 @@
 name: Daily sheet to website
 on:
+  push:
+    branches: [main]
   # Once daily at 12:17 KST, allowing time for morning collection.
   # This is a daily snapshot, not a collector-completion event.
   schedule:
@@ -12,9 +14,9 @@ concurrency:
   cancel-in-progress: false
 jobs:
   sync:
-    if: (github.event_name == 'workflow_dispatch' || vars.DAILY_SHEET_SYNC_ENABLED == 'true') && github.ref == 'refs/heads/main'
+    if: (github.event_name != 'schedule' || vars.DAILY_SHEET_SYNC_ENABLED == 'true') && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     permissions:
       contents: write
     outputs:
@@ -32,11 +34,24 @@ jobs:
           python-version: '3.12'
       - name: Install poster validation tools
         run: python -m pip install Pillow==11.3.0 pypdfium2==4.30.0
+      - name: Test data preservation and poster failure handling
+        run: |
+          node --test tests/*.test.cjs tests/*.test.mjs
+          python -m unittest discover -s tests -p 'test_*.py'
       - name: Read public columns and validate
         id: sync
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          POSTER_REPORT: reports/posters.json
         run: node scripts/sync-sheet.mjs
+      - name: Retain poster diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poster-report
+          path: reports/posters.json
+          if-no-files-found: ignore
+          retention-days: 30
       - name: Save only validated public files
         if: steps.sync.outputs.changed == 'true'
         run: |
@@ -50,7 +65,9 @@ jobs:
         run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
   deploy:
     needs: sync
-    if: needs.sync.outputs.changed == 'true'
+    # Re-publish even unchanged data: recover a previous deployment failure and
+    # publish app-only changes without requiring another sheet edit.
+    if: needs.sync.result == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
@@ -72,3 +89,9 @@ jobs:
       - name: Deploy updated website
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Record deployment
+        env:
+          REVISION: ${{ needs.sync.outputs.revision }}
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          printf '## Pages 배포 완료\n커밋: `%s`\n\n홈페이지: %s\n' "$REVISION" "$PAGE_URL" >> "$GITHUB_STEP_SUMMARY"

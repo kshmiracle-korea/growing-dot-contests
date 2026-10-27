@@ -32,7 +32,8 @@ export function publicItems(core, images) {
     item.deadline = date(item.deadline); item.startDate = date(item.startDate);
     if (Object.values(item).some(value => /^#(REF!|VALUE!|ERROR!|N\/A|DIV\/0!)/.test(value))) throw new Error('Source formula error');
     if (item.url && !/^https?:\/\//i.test(item.url)) throw new Error('Invalid public URL');
-    if (item.image && !/^https:\/\//i.test(item.image) && !/^\.\/contest-\d+\.(png|jpg|webp)$/.test(item.image)) throw new Error('Invalid image URL');
+    // Image URL validation belongs to the per-contest poster stage. A broken
+    // image field must not block otherwise valid public records.
   }
   return items;
 }
@@ -54,10 +55,20 @@ export function assertNoRecordLoss(items, previous) {
   if (items.length < previous.length) throw new Error('Source lost records; preserve published site for review');
 }
 
-async function requestJson(url, options = {}) {
-  const response = await fetch(url, {...options, signal: AbortSignal.timeout(30000)});
-  if (!response.ok) throw new Error(`Google request failed (${response.status})`);
-  return response.json();
+export async function requestJson(url, options = {}, fetcher = fetch, sleep = ms => new Promise(resolve => setTimeout(resolve, ms))) {
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    let retryable = true;
+    try {
+      const response = await fetcher(url, {...options, signal: AbortSignal.timeout(30000)});
+      retryable = response.status === 408 || response.status === 429 || response.status >= 500;
+      if (!response.ok) throw new Error(`Google request failed (${response.status})`);
+      return await response.json();
+    } catch (error) {
+      if (!retryable || attempt === 3) throw error;
+      console.error(`Google temporary request failure; attempt ${attempt + 1}/3`);
+      await sleep(attempt * 1000);
+    }
+  }
 }
 
 async function accessToken() {
@@ -108,6 +119,7 @@ export async function main() {
     await writeFile(htmlPath, updated);
   }
   if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `changed=${changed}\n`);
+  if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `\n## 시트 동기화 · ${koreanDay()}\n공개 항목 ${items.length}건 · ${changed ? '변경 반영' : '변경 없음'}\n원본 시트는 읽기 전용이며 기존 필드·행을 유지합니다.\n`);
   console.log(changed ? `Prepared ${items.length} public records.` : 'No public data changes; existing publication preserved.');
 }
 
