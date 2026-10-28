@@ -290,7 +290,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "과학기술정보통신부 / 한국과학창의재단·정보통신산업진흥원 등",
       "startDate": "2026-09-01",
-      "image": "./posters/dde7419ee458b8d4733e4bcc.jpg"
+      "image": "./posters/8d04e7ec18e470ea95edc8e1.jpg"
     },
     {
       "title": "제28회 말 사진·AI 이미지 공모전 「찰나의 말, 영원한 이야기」",
@@ -378,7 +378,7 @@ window.CONTEST_SNAPSHOT = {
       "status": "접수 중",
       "organizer": "BytePlus / ㈜스튜디오프리윌루전·AI-Kive",
       "startDate": "2026-10-01",
-      "image": "./posters/1031ea4cd620eee749d63f7c.jpg"
+      "image": "./posters/2178f43e68a36063612b790c.jpg"
     },
     {
       "title": "2026 자선냄비 나눔 AI 영상공모전",
@@ -742,6 +742,61 @@ window.CONTEST_SNAPSHOT = {
       "organizer": "과학기술정보통신부 / 한국과학창의재단 등",
       "startDate": "2026-10-08",
       "image": "./posters/cc036852d380cd4897647f4a.jpg"
+    },
+    {
+      "title": "2026 AI 달인 100 챌린지 시즌4 (취미·창작)",
+      "deadline": "2026-11-05",
+      "topic": "AI 활용 취미·창작 노하우와 실제 활용 과정을 60초 이내 세로형 숏폼으로 제작",
+      "eligibility": "AI에 관심 있는 일반인 누구나 / 개인 또는 팀",
+      "url": "https://nipa.kr/home/2-1/16927",
+      "status": "접수 중",
+      "organizer": "과학기술정보통신부 / 정보통신산업진흥원·한국정보통신기술협회",
+      "startDate": "2026-10-15",
+      "image": "./posters/3d6fcabedc284d746b6fa16a.jpg"
+    },
+    {
+      "title": "젝커톤 2026 | 젝트 × 스위프 AI 해커톤",
+      "deadline": "2026-10-31",
+      "topic": "AI 코딩 에이전트를 활용한 스포츠 주제 바이브톤·MVP 제작 및 시연",
+      "eligibility": "만 19세 이상 대학(원)생·취업준비생·직장인·일반인 / 개인 신청 후 4인 팀 매칭",
+      "url": "https://jeckathon.ject.kr/",
+      "status": "접수 중",
+      "organizer": "젝트(JECT)·스위프(SWYP)",
+      "startDate": "2026-10-20",
+      "image": ""
+    },
+    {
+      "title": "2026 KU 캠퍼스타운 AI 글로벌 해커톤",
+      "deadline": "2026-10-30",
+      "topic": "AI 활용 글로벌 창업 아이디어·서비스 기획, AI 기반 시장조사·MVP 제작·IR 경진대회",
+      "eligibility": "건국대 캠퍼스타운 입주기업·국내외 대학(원)생·서울시 거주 청년(19~39세)·예비창업자 / 일반인 포함",
+      "url": "https://campustown.seoul.go.kr/site/main/board/university_news/3196",
+      "status": "접수 중",
+      "organizer": "건국대학교 KU 캠퍼스타운사업본부·서울특별시 / ㈜메인콘텐츠",
+      "startDate": "2026-10-19",
+      "image": ""
+    },
+    {
+      "title": "[산사람 × AI-Kive] 진짜 오타쿠 AI MV 챌린지",
+      "deadline": "2026-11-11",
+      "topic": "제공 원곡 '진짜 오타쿠'를 활용한 생성형 AI 뮤직비디오(30초~4분30초) 창작",
+      "eligibility": "만 14세 이상 대한민국 국민 누구나 / 개인 또는 팀",
+      "url": "https://aikive.com/event/207f776111a4416a9bf9c5130e1d8f93",
+      "status": "접수 중",
+      "organizer": "㈜과나(산사람) / ㈜스튜디오프리윌루전(AI-Kive)",
+      "startDate": "2026-10-14",
+      "image": "./posters/5dff7f221ae8932b95a9952c.jpg"
+    },
+    {
+      "title": "제2회 인공지능 활용 우수사례 공모전 (일반인 수기 부문)",
+      "deadline": "2026-10-31",
+      "topic": "생성형 AI를 학업·일상·진로 등에 활용한 경험과 우수사례 수기 공모",
+      "eligibility": "수기 부문: 대한민국 국민 누구나 / 제작 부문은 청소년·대학생 전용(일반인 제외)",
+      "url": "https://andyouth.or.kr/kr/community/notice.php?bgu=view&idx=1669",
+      "status": "접수 중",
+      "organizer": "시립노원청소년미래진로센터(앤드센터)",
+      "startDate": "2026-10-01",
+      "image": "./posters/3f5536721cf88b128b11a533.jpg"
     },
     {
       "title": "2026 AI 달인 100 챌린지 시즌4 (취미·창작)",
