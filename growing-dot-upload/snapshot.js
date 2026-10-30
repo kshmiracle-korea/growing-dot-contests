@@ -1,6 +1,6 @@
 window.CONTEST_SNAPSHOT = {
   "ok": true,
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-30",
   "source": {
     "spreadsheetId": "1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw",
     "sheet": "공모전 관리"
@@ -606,7 +606,7 @@ window.CONTEST_SNAPSHOT = {
       "topic": "생성형 AI를 활용한 고속도로 경관·안전 디자인 / 휴게소 보행자 안전·지하고속도로·생태통로·자유주제",
       "eligibility": "대한민국 국민 누구나 / 개인 또는 2인 이하 팀 / AI 활용 부문",
       "url": "https://www.ex-contest.co.kr/design26",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "한국도로공사",
       "startDate": "2026-08-24",
       "image": "./posters/927335ead788a69078a96098.jpg"
