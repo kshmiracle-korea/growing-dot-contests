@@ -797,17 +797,6 @@ window.CONTEST_SNAPSHOT = {
       "organizer": "시립노원청소년미래진로센터(앤드센터)",
       "startDate": "2026-10-01",
       "image": "./posters/3f5536721cf88b128b11a533.jpg"
-    },
-    {
-      "title": "2026 AI 달인 100 챌린지 시즌4 (취미·창작)",
-      "deadline": "2026-11-05",
-      "topic": "AI 활용 취미·창작 노하우와 실제 활용 과정을 60초 이내 세로형 숏폼으로 제작",
-      "eligibility": "AI에 관심 있는 일반인 누구나 / 개인 또는 팀",
-      "url": "https://nipa.kr/home/2-1/16927",
-      "status": "접수 중",
-      "organizer": "과학기술정보통신부 / 정보통신산업진흥원·한국정보통신기술협회",
-      "startDate": "2026-10-15",
-      "image": "./posters/3d6fcabedc284d746b6fa16a.jpg"
     }
   ]
 };
