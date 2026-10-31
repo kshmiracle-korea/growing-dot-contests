@@ -1,6 +1,6 @@
 window.CONTEST_SNAPSHOT = {
   "ok": true,
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-10-31",
   "source": {
     "spreadsheetId": "1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw",
     "sheet": "공모전 관리"
@@ -276,7 +276,7 @@ window.CONTEST_SNAPSHOT = {
       "topic": "해운·항만·물류 산업 현장 문제 해결 및 AI 전환(AX) 촉진 혁신 아이디어",
       "eligibility": "해양산업 AX에 관심 있는 대학(원)생·해운·항만·물류 유관 기업 및 종사자 / 개인 또는 팀",
       "url": "https://kobcax.com/notice/%EA%B3%B5%EC%A7%80-2026-%ED%95%B4%EC%9A%B4%C2%B7%ED%95%AD%EB%A7%8C%C2%B7%EB%AC%BC%EB%A5%98-ax-%ED%98%81%EC%8B%A0-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4-%EA%B3%B5%EB%AA%A8%EC%A0%84/",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "한국해양진흥공사",
       "startDate": "2026-09-07",
       "image": "./posters/59342bf06f62f762efe2fbcb.jpg"
@@ -375,7 +375,7 @@ window.CONTEST_SNAPSHOT = {
       "topic": "생성형 AI 활용 30~60초 시리즈 프롤로그 영상·로그라인·시놉시스 제작",
       "eligibility": "만 19세 이상 누구나 / 개인 또는 팀; 만 14세 이상 미성년자는 성인 대표가 있는 팀으로만 참가 가능",
       "url": "https://aikive.com/event/c1f47e0aa9eb45ae9e28305b65c14ce0",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "BytePlus / ㈜스튜디오프리윌루전·AI-Kive",
       "startDate": "2026-10-01",
       "image": "./posters/2178f43e68a36063612b790c.jpg"
@@ -386,7 +386,7 @@ window.CONTEST_SNAPSHOT = {
       "topic": "구세군 자선냄비 'Light of life(생명의 빛)' 나눔·기부 문화 확산 생성형 AI 영상",
       "eligibility": "전 국민 / 개인 또는 3인 이하 팀",
       "url": "https://www.thesalvationarmy.or.kr/story/news/3341?uid=news&page=0&text=",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "구세군자선냄비본부",
       "startDate": "2026-10-01",
       "image": "./posters/8cbc671f8f8f82e624cdbb6c.jpg"
@@ -452,7 +452,7 @@ window.CONTEST_SNAPSHOT = {
       "topic": "AI로 그리는 대도약 완주: 관광명소·축제·랜드마크·미래산업·캠페인 60~120초 AI 영상",
       "eligibility": "대한민국 국민 누구나 / 개인 또는 팀",
       "url": "https://www.wanju.go.kr/index.9is?contentUid=ff8080818b024d8e018b274f41dd2af8&subPath=",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "전북특별자치도 완주군",
       "startDate": "2026-09-04",
       "image": "./posters/0174f5446255c168e35f97ef.jpg"
@@ -573,7 +573,7 @@ window.CONTEST_SNAPSHOT = {
       "topic": "AI 기술혁신 기반 부산 관광·마이스 창업 아이디어 발굴 및 사업화 해커톤",
       "eligibility": "관광·마이스 분야 청년 예비 창업가 / 2인 이상 팀 / 재학생 자격 불필요",
       "url": "https://tourbiz.bto.or.kr/kor/CMS/Board/Board.do?board_seq=1271&mCode=MN032&mgr_seq=6&mode=view",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "부산광역시·부산관광공사·RISE 협약 대학",
       "startDate": "2026-10-06",
       "image": "./posters/528c80696d16763d2481366d.jpg"
@@ -584,7 +584,7 @@ window.CONTEST_SNAPSHOT = {
       "topic": "할로윈 테마 AI 활용 개인 개발 해커톤 / 자유주제 앱·프로젝트 제작",
       "eligibility": "만 14세 이상 누구나(성인·일반인 참가 가능) / 개인전",
       "url": "https://hackon.kr/e/1a32b615",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "HACK:ON(해커온) / LOOKIE 5개 대학 창업동아리 연합",
       "startDate": "2026-10-13",
       "image": "./posters/59256f346b3b1f2d1fe8fdec.jpg"
@@ -771,7 +771,7 @@ window.CONTEST_SNAPSHOT = {
       "topic": "AI 활용 글로벌 창업 아이디어·서비스 기획, AI 기반 시장조사·MVP 제작·IR 경진대회",
       "eligibility": "건국대 캠퍼스타운 입주기업·국내외 대학(원)생·서울시 거주 청년(19~39세)·예비창업자 / 일반인 포함",
       "url": "https://campustown.seoul.go.kr/site/main/board/university_news/3196",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "건국대학교 KU 캠퍼스타운사업본부·서울특별시 / ㈜메인콘텐츠",
       "startDate": "2026-10-19",
       "image": ""
