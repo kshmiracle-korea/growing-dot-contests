@@ -6,6 +6,8 @@ import {pathToFileURL} from 'node:url';
 const SHEET_ID = '1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw';
 const FIELDS = ['title', 'deadline', 'topic', 'eligibility', 'url', 'status', 'organizer', 'startDate', 'image'];
 const HEADERS = ['공모전명', '마감일', '분야/주제', '참가 대상', '공모전 URL', '상태', '주최/주관', '접수 시작일', '이미지 URL'];
+const NEW_HEADERS = ['공모전명', '분야/주제', '유형', '참가 대상', '마감일', '공모전 URL', '상태', '주최/주관', '접수 시작일'];
+const NEW_FIELDS = ['title', 'topic', 'category', 'eligibility', 'deadline', 'url', 'status', 'organizer', 'startDate'];
 const prefix = 'window.CONTEST_SNAPSHOT = ';
 const base64url = value => Buffer.from(JSON.stringify(value)).toString('base64url');
 export const koreanDay = (now = new Date()) => new Intl.DateTimeFormat('en-CA', {timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit'}).format(now);
@@ -22,10 +24,15 @@ function date(value) {
 
 export function publicItems(core, images) {
   if (!Array.isArray(core) || !Array.isArray(images) || core.length > 10000 || images.length > 10000) throw new Error('Invalid source size');
-  if (core[0]?.length !== 8 || !HEADERS.slice(0, 8).every((h, i) => core[0][i]?.trim() === h) || images[0]?.[0]?.trim() !== HEADERS[8]) throw new Error('Source columns changed; review required');
+  const modern = core[0]?.length === NEW_HEADERS.length;
+  const headers = modern ? NEW_HEADERS : HEADERS.slice(0, 8);
+  const fields = modern ? NEW_FIELDS : FIELDS.slice(0, 8);
+  if (core[0]?.length !== headers.length || !headers.every((h, i) => core[0][i]?.trim() === h) || images[0]?.[0]?.trim() !== '이미지 URL') throw new Error('Source columns changed; review required');
   const items = core.slice(1).map((row, index) => {
-    if (!Array.isArray(row) || row.length > 8 || (images[index + 1]?.length || 0) > 1) throw new Error('Invalid row shape');
-    return Object.fromEntries(FIELDS.map((field, i) => [field, String(i < 8 ? row[i] ?? '' : images[index + 1]?.[0] ?? '').trim()]));
+    if (!Array.isArray(row) || row.length > fields.length || (images[index + 1]?.length || 0) > 1) throw new Error('Invalid row shape');
+    const item = Object.fromEntries(fields.map((field, i) => [field, String(row[i] ?? '').trim()]));
+    item.image = String(images[index + 1]?.[0] ?? '').trim();
+    return item;
   }).filter(item => item.title);
   if (!items.length) throw new Error('Empty source; preserve published site');
   for (const item of items) {
@@ -50,9 +57,23 @@ export function previousItems(text) {
   return parsed.items;
 }
 
+// Preserve edition/year in the full title; a changed deadline is not a new contest.
+// The collector verifies official freshness. For repeated records, later source
+// entries supply non-empty updates while earlier valid details are retained.
+export function uniqueItems(items) {
+  const normalize = value => String(value || '').normalize('NFKC').toLowerCase().replace(/\s+/g, '');
+  const records = new Map();
+  for (const item of items) {
+    const key = normalize(item.title) + '|' + normalize(item.organizer || item.url);
+    const old = records.get(key) || {};
+    records.set(key, {...old, ...Object.fromEntries(Object.entries(item).filter(([field, value]) => value !== '' || !old[field]))});
+  }
+  return [...records.values()];
+}
+
 export function assertNoRecordLoss(items, previous) {
-  // A missing source row must not silently erase archived records.
-  if (items.length < previous.length) throw new Error('Source lost records; preserve published site for review');
+  // Removing duplicate copies is allowed; loss of unique records still blocks.
+  if (uniqueItems(items).length < uniqueItems(previous).length) throw new Error('Source lost records; preserve published site for review');
 }
 
 export async function requestJson(url, options = {}, fetcher = fetch, sleep = ms => new Promise(resolve => setTimeout(resolve, ms))) {
@@ -84,11 +105,22 @@ async function accessToken() {
 }
 
 async function readPublicColumns(token) {
-  // Never request A, J:Q, or S onward: internal notes and keys are not read.
-  const url = new URL(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values:batchGet`);
-  for (const range of ["'공모전 관리'!B1:I10000", "'공모전 관리'!R1:R10000"]) url.searchParams.append('ranges', range);
-  url.searchParams.set('valueRenderOption', 'FORMATTED_VALUE');
-  const result = await requestJson(url, {headers: {Authorization: `Bearer ${token}`}});
+  async function read(ranges) {
+    const url = new URL(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values:batchGet`);
+    for (const range of ranges) url.searchParams.append('ranges', range);
+    url.searchParams.set('valueRenderOption', 'FORMATTED_VALUE');
+    return requestJson(url, {headers: {Authorization: `Bearer ${token}`}});
+  }
+  // Inspect header names before choosing exact public ranges. Never fetch
+  // interest, notes, duplicate keys, verification dates or other internal data.
+  const headerResult = await read(["'공모전 관리'!B1:J1"]);
+  const header = headerResult.valueRanges?.[0]?.values?.[0] || [];
+  const modern = NEW_HEADERS.every((name, i) => header[i]?.trim() === name);
+  const legacy = HEADERS.slice(0, 8).every((name, i) => header[i]?.trim() === name);
+  if (!modern && !legacy) throw new Error('Source columns changed; review required');
+  const ranges = modern ? ["'공모전 관리'!B1:J10000", "'공모전 관리'!S1:S10000"]
+    : ["'공모전 관리'!B1:I10000", "'공모전 관리'!R1:R10000"];
+  const result = await read(ranges);
   if (result.valueRanges?.length !== 2) throw new Error('Incomplete source response');
   return publicItems(result.valueRanges[0].values, result.valueRanges[1].values);
 }
@@ -102,6 +134,9 @@ export async function main() {
   // This is not a collection-complete signal; that must come from the collector.
   const confirmation = await readPublicColumns(token);
   if (JSON.stringify(items) !== JSON.stringify(confirmation)) throw new Error('Source changing during read; preserve published site');
+  const sourceCount = items.length;
+  items = uniqueItems(items);
+  const duplicates = sourceCount - items.length;
   assertNoRecordLoss(items, existing);
   const posters = spawnSync('python', ['scripts/cache-posters.py'], {input: JSON.stringify({items, previous: existing}), encoding: 'utf8', maxBuffer: 10 * 1024 * 1024, env: {...process.env, PYTHONIOENCODING: 'utf-8'}});
   if (posters.stderr) process.stderr.write(posters.stderr);
@@ -119,7 +154,7 @@ export async function main() {
     await writeFile(htmlPath, updated);
   }
   if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `changed=${changed}\n`);
-  if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `\n## 시트 동기화 · ${koreanDay()}\n공개 항목 ${items.length}건 · ${changed ? '변경 반영' : '변경 없음'}\n원본 시트는 읽기 전용이며 기존 필드·행을 유지합니다.\n`);
+  if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `\n## 시트 동기화 · ${koreanDay()}\n공개 항목 ${items.length}건 · 중복 통합 ${duplicates}건 · ${changed ? '변경 반영' : '변경 없음'}\n원본 시트는 읽기 전용이며 동일 공모전은 공개 목록에 1건만 반영합니다.\n`);
   console.log(changed ? `Prepared ${items.length} public records.` : 'No public data changes; existing publication preserved.');
 }
 

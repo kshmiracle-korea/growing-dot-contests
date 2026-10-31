@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {publicItems, snapshotText, previousItems, assertNoRecordLoss, koreanDay, requestJson} from '../scripts/sync-sheet.mjs';
+import {publicItems, snapshotText, previousItems, assertNoRecordLoss, koreanDay, requestJson, uniqueItems} from '../scripts/sync-sheet.mjs';
 const header = ['공모전명', '마감일', '분야/주제', '참가 대상', '공모전 URL', '상태', '주최/주관', '접수 시작일'];
 const row = ['Example', '2026. 10. 12.', 'AI', 'Everyone', 'https://example.org', '마감', 'Host', '2026-09-01'];
 test('public schema retains closed contests and images, never accepts additional fields', () => {
@@ -51,4 +51,28 @@ test('Google transient failures retry at most three times; permanent failures st
 
 test('an invalid image address is deferred to per-item validation', () => {
   assert.equal(publicItems([header, row], [['이미지 URL'], ['http://broken.example/poster.jpg']])[0].title, 'Example');
+});
+
+test('reordered columns with category retain public fields and poster alignment', () => {
+  const headers = ['공모전명','분야/주제','유형','참가 대상','마감일','공모전 URL','상태','주최/주관','접수 시작일'];
+  const values = ['Example','Short video','영상','Everyone','2026-11-05','https://example.org','접수 중','Host','2026-10-15'];
+  const [item] = publicItems([headers,values], [['이미지 URL'],['https://example.org/poster.jpg']]);
+  assert.equal(item.deadline, '2026-11-05');
+  assert.equal(item.category, '영상');
+  assert.equal(item.eligibility, 'Everyone');
+  assert.equal(item.image, 'https://example.org/poster.jpg');
+  assert.equal(item.startDate, '2026-10-15');
+  assert.throws(() => publicItems([headers,[...values,'private']], [['이미지 URL']]));
+});
+test('duplicate contests merge later nonblank updates but keep distinct editions', () => {
+  const original = {title:'2026 AI Contest Season 4', organizer:'Host', deadline:'2026-11-05', image:'https://example.org/poster.jpg', url:'https://example.org'};
+  const latest = {...original,title:'2026 AI Contest Season  4',deadline:'2026-11-15',image:''};
+  const next = {...original,title:'2026 AI Contest Season 5'};
+  const result = uniqueItems([original,latest,next]);
+  assert.equal(result.length,2);
+  assert.equal(result[0].deadline,'2026-11-15');
+  assert.equal(result[0].image,original.image);
+  assert.deepEqual(uniqueItems(result),result);
+  assert.doesNotThrow(() => assertNoRecordLoss(result,[original,latest,next]));
+  assert.throws(() => assertNoRecordLoss([original],[original,next]));
 });
