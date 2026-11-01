@@ -1,6 +1,6 @@
 window.CONTEST_SNAPSHOT = {
   "ok": true,
-  "updatedAt": "2026-10-31",
+  "updatedAt": "2026-11-01",
   "source": {
     "spreadsheetId": "1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw",
     "sheet": "공모전 관리"
@@ -97,7 +97,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "NKIS에 관심 있는 국민 누구나 / 개인 또는 3인 이하 팀",
       "deadline": "2026-10-31",
       "url": "https://www.nkis.re.kr/commonBoard_view.do?bbs_id=BBSMSTR_000000000154&cate_code=N&menuNo=401000&ntt_id=16946",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "경제·인문사회연구회",
       "startDate": "2026-09-07",
       "image": "./contest-06.png"
@@ -313,7 +313,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "일반 국민 누구나",
       "deadline": "2026-10-31",
       "url": "https://aichallenge4all.or.kr/competitions/case-contest",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "과학기술정보통신부 / 한국과학창의재단·정보통신산업진흥원 등",
       "startDate": "2026-09-01",
       "image": "./posters/8d04e7ec18e470ea95edc8e1.jpg"
@@ -325,7 +325,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "대한민국 국민 누구나",
       "deadline": "2026-10-31",
       "url": "https://horsephoto.co.kr/",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "한국마사회",
       "startDate": "2026-10-01",
       "image": "./posters/578a031b6a2bd09ec0caf97c.jpg"
@@ -433,7 +433,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "전 국민 / 개인·팀·연구기관·스타트업·학생 등 제한 없음",
       "deadline": "2026-10-31",
       "url": "https://www.keit.re.kr/board.es?mid=a10301010000&bid=0009&act=view&list_no=128385",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "산업통상부 / 한국산업기술기획평가원(KEIT)",
       "startDate": "2026-09-30",
       "image": "./posters/87b7f92b6a97fb5a2c8fefe5.jpg"
@@ -505,7 +505,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "세종사이버대학교 재학생·졸업생 및 대한민국 국민 누구나(일반인 참가 가능)",
       "deadline": "2026-10-31",
       "url": "https://cms.sjcu.ac.kr/fire01/news/notice.do?mode=view&articleNo=138246&article.offset=0&articleLimit=10",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "세종사이버대학교 소방방재학과·소방행정학과",
       "startDate": "2026-09-07",
       "image": "./posters/68d5ccb358602314b36cfa81.jpg"
@@ -517,7 +517,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "누구나 참여 가능(학생 신분 제한 없음)",
       "deadline": "2026-10-31",
       "url": "https://www.ijongno.co.kr/www/136?action=read&action-value=106fcd9959f96067785b962b1a65cc24",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "종로구시설관리공단",
       "startDate": "2026-10-01",
       "image": "./posters/d1b65144c8261cb54c1c71ae.jpg"
@@ -673,7 +673,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "뮤직비디오 제작에 관심 있는 누구나 / 개인 또는 팀 / 1팀 최대 3작품",
       "deadline": "2026-10-31",
       "url": "https://aichallenge4all.or.kr/competitions/producer",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "과학기술정보통신부 / 정보통신산업진흥원·한국과학창의재단·한국지능정보사회진흥원·한국정보통신기술협회",
       "startDate": "2026-10-01",
       "image": "./posters/5c35c5c8390136cfa5eb55ba.jpg"
@@ -829,7 +829,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "만 19세 이상 대학(원)생·취업준비생·직장인·일반인 / 개인 신청 후 4인 팀 매칭",
       "deadline": "2026-10-31",
       "url": "https://jeckathon.ject.kr/",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "젝트(JECT)·스위프(SWYP)",
       "startDate": "2026-10-20",
       "image": ""
@@ -865,7 +865,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "수기 부문: 대한민국 국민 누구나 / 제작 부문은 청소년·대학생 전용(일반인 제외)",
       "deadline": "2026-10-31",
       "url": "https://andyouth.or.kr/kr/community/notice.php?bgu=view&idx=1669",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "시립노원청소년미래진로센터(앤드센터)",
       "startDate": "2026-10-01",
       "image": "./posters/3f5536721cf88b128b11a533.jpg"
