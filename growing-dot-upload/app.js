@@ -103,8 +103,9 @@
       const meta = make('div','card-meta');
       const details = make('dl', 'contest-details');
       const fields = [
-        ['상태', status], ['마감일', item.deadline || '공고에서 확인'],
-        ['분야/주제', item.topic || '공고에서 확인'], ['참가 대상', item.eligibility || '공고에서 확인'],
+        ['상태', status],
+        ['분야/주제', item.topic || '공고에서 확인'], ['유형', item.category || '분류 확인 중'],
+        ['참가 대상', item.eligibility || '공고에서 확인'], ['마감일', item.deadline || '공고에서 확인'],
         ['주최/주관', item.organizer || '공고에서 확인'], ['접수 시작일', item.startDate || '공고에서 확인']
       ];
       for (const [name, value] of fields) {
@@ -132,7 +133,7 @@
   function accept(data) {
     if (!data || data.ok !== true || !Array.isArray(data.items)) throw new Error('Invalid feed');
     items = data.items.filter(x => x && typeof x.title === 'string' && x.title.trim()).map(x => ({
-      title:x.title.trim(), deadline:String(x.deadline || ''), organizer:String(x.organizer || ''), topic:String(x.topic || ''), eligibility:String(x.eligibility || ''), status:String(x.status || ''), startDate:String(x.startDate || ''), image:String(x.image || ''), url:String(x.url || '')
+      title:x.title.trim(), deadline:String(x.deadline || ''), organizer:String(x.organizer || ''), topic:String(x.topic || ''), category:String(x.category || ''), eligibility:String(x.eligibility || ''), status:String(x.status || ''), startDate:String(x.startDate || ''), image:String(x.image || ''), url:String(x.url || '')
     }));
     hasData = true; render();
   }
