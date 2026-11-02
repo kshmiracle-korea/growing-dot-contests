@@ -1,6 +1,6 @@
 window.CONTEST_SNAPSHOT = {
   "ok": true,
-  "updatedAt": "2026-11-01",
+  "updatedAt": "2026-11-02",
   "source": {
     "spreadsheetId": "1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw",
     "sheet": "공모전 관리"
@@ -337,7 +337,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "제천시에 관심 있는 전 국민 / 개인 또는 팀",
       "deadline": "2026-11-01",
       "url": "https://www.jecheon.go.kr/",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "충청북도 제천시",
       "startDate": "2026-09-28",
       "image": "./posters/c2f400e78b88a5c4da86519d.jpg"
