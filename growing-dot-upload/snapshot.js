@@ -1,6 +1,6 @@
 window.CONTEST_SNAPSHOT = {
   "ok": true,
-  "updatedAt": "2026-11-02",
+  "updatedAt": "2026-11-03",
   "source": {
     "spreadsheetId": "1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw",
     "sheet": "공모전 관리"
@@ -613,7 +613,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "국내외 고등·대학(원) 재학생 또는 졸업 후 3년 이내 미취업자(비학생도 참가 가능)",
       "deadline": "2026-11-02",
       "url": "https://www.dacon.io/competitions/official/236771/overview/description",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "해양수산부 / 울산항만공사·한국정보산업연합회 (데이콘 운영)",
       "startDate": "2026-09-30",
       "image": "./posters/65736c08c5d4802c728d14e1.jpg"
@@ -805,7 +805,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "분야·계층 제한 없음 / 직접 정비·운용 가능한 로봇 보유 개인 또는 최대 10인 팀",
       "deadline": "2026-11-02",
       "url": "https://aichallenge4all.or.kr/competitions/ai-robot",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "과학기술정보통신부 / 한국과학창의재단 등",
       "startDate": "2026-10-08",
       "image": "./posters/cc036852d380cd4897647f4a.jpg"
