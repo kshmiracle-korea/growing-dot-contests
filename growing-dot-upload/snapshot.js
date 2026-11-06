@@ -1,6 +1,6 @@
 window.CONTEST_SNAPSHOT = {
   "ok": true,
-  "updatedAt": "2026-11-03",
+  "updatedAt": "2026-11-06",
   "source": {
     "spreadsheetId": "1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw",
     "sheet": "공모전 관리"
@@ -817,7 +817,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "AI에 관심 있는 일반인 누구나 / 개인 또는 팀",
       "deadline": "2026-11-05",
       "url": "https://nipa.kr/home/2-1/16927",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "과학기술정보통신부 / 정보통신산업진흥원·한국정보통신기술협회",
       "startDate": "2026-10-15",
       "image": "./posters/3d6fcabedc284d746b6fa16a.jpg"
