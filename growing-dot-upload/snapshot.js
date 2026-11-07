@@ -1,6 +1,6 @@
 window.CONTEST_SNAPSHOT = {
   "ok": true,
-  "updatedAt": "2026-11-06",
+  "updatedAt": "2026-11-07",
   "source": {
     "spreadsheetId": "1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw",
     "sheet": "공모전 관리"
@@ -529,7 +529,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "데이터 분석·AI 활용에 관심 있는 개인 또는 팀(일반인 참가 가능)",
       "deadline": "2026-11-06",
       "url": "https://aida.kisti.re.kr/competition/main/competition/COMP_000000000000050/detail.do",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "과학기술정보통신부 등 유관기관 / 한국과학기술정보연구원(KISTI)",
       "startDate": "2026-09-15",
       "image": "./posters/8896fe8f71bf230f9ad54c46.jpg"
@@ -769,7 +769,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "매돌이·광양시에 관심 있는 대한민국 국민 누구나 / 개인 또는 4인 이내 팀",
       "deadline": "2026-11-06",
       "url": "https://gwangyang.go.kr/saeol/gosi.es?act=view&bid=0022&mid=a10909020000&seq=62191",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "광양시 / 광양시청 홍보소통실",
       "startDate": "2026-10-26",
       "image": "./posters/979a03a24c4997c4d776fd5b.jpg"
