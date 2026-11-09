@@ -1,6 +1,6 @@
 window.CONTEST_SNAPSHOT = {
   "ok": true,
-  "updatedAt": "2026-11-07",
+  "updatedAt": "2026-11-09",
   "source": {
     "spreadsheetId": "1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw",
     "sheet": "공모전 관리"
@@ -109,7 +109,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "서울시민 누구나 / 개인 또는 학교·청소년시설 등 소속 단위",
       "deadline": "2026-11-08",
       "url": "https://www.sy0404.or.kr/bbs/board.php?bo_table=notice&wr_id=1463",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "서울특별시립청소년활동진흥센터",
       "startDate": "2026-09-03",
       "image": "./contest-05.png"
@@ -205,7 +205,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "대한지방행정공제회 회원 누구나",
       "deadline": "2026-11-08",
       "url": "https://www.poba.or.kr/bbs/selectNttDetail?sechBbsSeq=10&sechBbstSeq=97367&sechWrdTySeCd=T&sechWrd=",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "대한지방행정공제회",
       "startDate": "2026-09-14",
       "image": "./contest-12.jpg"
@@ -541,7 +541,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "의정부도시공사에 관심 있는 누구나(일반인 참가 가능)",
       "deadline": "2026-11-08",
       "url": "https://www.uiuc.or.kr/companyNotice/noticePage/notice/view.do?bbsId=BBSMSTR_000000000001&nttId=5514",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "의정부도시공사",
       "startDate": "2026-09-15",
       "image": "./posters/709f781a19733a91c2c1235d.jpg"
