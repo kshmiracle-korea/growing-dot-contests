@@ -1,6 +1,6 @@
 window.CONTEST_SNAPSHOT = {
   "ok": true,
-  "updatedAt": "2026-11-09",
+  "updatedAt": "2026-11-12",
   "source": {
     "spreadsheetId": "1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw",
     "sheet": "공모전 관리"
@@ -553,7 +553,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "누구나(제한 없음)",
       "deadline": "2026-11-11",
       "url": "https://ai-film.kr/",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "AI영화조직위원회 / AI융합산업협회·Global K",
       "startDate": "2026-09-15",
       "image": "./posters/fb2bbf9c95ab8fa2ad8be7aa.jpg"
@@ -853,7 +853,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "만 14세 이상 대한민국 국민 누구나 / 개인 또는 팀",
       "deadline": "2026-11-11",
       "url": "https://aikive.com/event/207f776111a4416a9bf9c5130e1d8f93",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "㈜과나(산사람) / ㈜스튜디오프리윌루전(AI-Kive)",
       "startDate": "2026-10-14",
       "image": "./posters/5dff7f221ae8932b95a9952c.jpg"
