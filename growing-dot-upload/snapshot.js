@@ -1,6 +1,6 @@
 window.CONTEST_SNAPSHOT = {
   "ok": true,
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-13",
   "source": {
     "spreadsheetId": "1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw",
     "sheet": "공모전 관리"
@@ -349,7 +349,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "누구나 / 개인 또는 최대 5인 팀",
       "deadline": "2026-11-12",
       "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "한국투자공사(KIC) / 데이콘(DAKER)",
       "startDate": "2026-10-01",
       "image": "./posters/5adec4b128ed5defd59c4a07.jpg"
@@ -697,7 +697,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "세종사이버대학교 재학생·졸업생 및 고등학교 재학 이상 일반인 / 개인 참가(팀 불가)",
       "deadline": "2026-11-12",
       "url": "https://edu.sjcu.ac.kr/military/news/notice.do?articleNo=135178&mode=view",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "세종사이버대학교 국방융합학과",
       "startDate": "2026-05-27",
       "image": "./posters/596faa4d944d711a47f8a6db.jpg"
