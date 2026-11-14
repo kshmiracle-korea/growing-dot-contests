@@ -1,6 +1,6 @@
 window.CONTEST_SNAPSHOT = {
   "ok": true,
-  "updatedAt": "2026-11-13",
+  "updatedAt": "2026-11-14",
   "source": {
     "spreadsheetId": "1avQQiH13UvHJ2pbxTvbjbSTQmUOHuc-YHx_01DUu3iw",
     "sheet": "공모전 관리"
@@ -361,7 +361,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "신기술 활용에 관심 있는 모든 국민(국내 거주자 / 개인 또는 최대 3인 팀)",
       "deadline": "2026-11-13",
       "url": "https://www.xn--ai-vs1i84a86y3mi7lxqfa73b312f.com/",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "한국지방재정공제회 한국옥외광고센터",
       "startDate": "2026-09-14",
       "image": "./posters/10ee7edf5194994e866d76c5.jpg"
@@ -445,7 +445,7 @@ window.CONTEST_SNAPSHOT = {
       "eligibility": "대한민국 거주 누구나 / 개인 또는 4인 이하 팀",
       "deadline": "2026-11-13",
       "url": "https://kiat.or.kr/front/board/boardContentsView.do?MenuId=&board_id=5&contents_id=5f9c77b29adf4d32b5f722ed7fd7f73e",
-      "status": "접수 중",
+      "status": "마감",
       "organizer": "산업통상부 / 한국산업기술진흥원(KIAT)",
       "startDate": "2026-10-06",
       "image": "./posters/3c1122b36ff8b8aafe53f097.jpg"
